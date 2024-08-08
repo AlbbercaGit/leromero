@@ -45,7 +45,7 @@ const Parallax = () => {
       <div
         ref={containerRef}
         id="Parallax"
-        className="bg-izq bg-cover w-1/5 h-1/5 rounded-md transition-transform duration-[1s] ease-in-out"
+        className="bg-izq bg-cover w-1/5 h-1/5 rounded-md transition-transform duration-[0s] ease-in-out"
         style={{ transform: `scale(${scale})` }}
       ></div>
       

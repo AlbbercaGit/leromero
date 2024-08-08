@@ -12,7 +12,7 @@ const Donde = () => {
  </div>
 </div>
 
-      {/* <div className="w-full h-full flex items-center justify-center">
+      <div className="w-full h-full flex items-center justify-center">
       <div className="bg-izq   bg-cover bg-fixed bg-left bg-no-repeat shadow-2xl w-full rounded-[80px] h-full"></div>
       <p className=" p-5 w-full h-full flex items-center justify-center  font-medium mb-10  text-base italic " >
 Disfruta de nuestra terraza: buen ambiente, temperatura agradable y brisa fresca.
@@ -24,7 +24,7 @@ Disfruta de nuestra terraza: buen ambiente, temperatura agradable y brisa fresca
       Nuestro interior es moderno y acogedor, con un ambiente cálido y cercano. Ideal para disfrutar de una comida deliciosa en un espacio íntimo y confortable.
            </p>
            <div className="bg-der   bg-cover bg-fixed bg-left bg-no-repeat shadow-2xl w-full rounded-[80px] h-full"></div>
-           </div> */}
+           </div>
     </main>
   );
 };
