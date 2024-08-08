@@ -4,12 +4,12 @@ import "../style.css";
 
 const Sticky = () => {
   const SECTION_HEIGHT = 1000;
-  const START_HEIGHT = 1000; // Altura en la que comienza a cambiar el clipPath
+  const START_HEIGHT = 750; // Altura en la que comienza a cambiar el clipPath
 
   const { scrollY } = useScroll();
   const opacity = useTransform(
     scrollY,
-    [SECTION_HEIGHT, SECTION_HEIGHT + 100],
+    [1800, SECTION_HEIGHT * 8],
     [1, 0]
   );
 
@@ -38,14 +38,27 @@ const Sticky = () => {
   }, []);
 
   return (
-    <main className="relative w-full h-[355vh] bg-paper-texture">
+    
+    <main className="relative w-full h-[370vh] bg-paper-texture font-sans">
+      <div className="position absolute  w-full h-[25vh]  flex flex-col items-center justify-center">
+      <h1 className=" text-xl text-center ">¿Cansado de la rutina?</h1>
+      <h2 className="text-lg  text-center ">Ven y desconecta!</h2>
+      </div>
       <motion.div
-        className="sticky top-0 h-screen w-full parallax bg-izq bg-cover sm:bg-fixed bg-center bg-no-repeat"
+        className="sticky top-0 h-screen w-full parallax bg-izq bg-cover sm:bg-fixed flex items-end bg-center bg-no-repeat"
         style={{
           clipPath,
+          opacity,
           willChange: "clip-path, opacity",
         }}
-      ></motion.div>
+      >
+                    <div className="flex flex-col w-full  items-center h-[9vh] pb-20 justify-center  text-white bg-gradient-border-bot ">
+                    <h2 className="text-sm font-light  px-5 text-left w-full ">Tu otra casa*</h2>
+
+      <h2 className="text-sm font-light  px-5 text-left ">¿Como no vas a desconectar con este ambiente?</h2>
+      {/* <h2 className="text-lg  text-center "></h2> */}
+      </div>
+      </motion.div>
     </main>
   );
 };

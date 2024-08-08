@@ -1,9 +1,50 @@
 import React from "react";
 import "../style.css"; // Asegúrate de tener este archivo para estilos personalizados
+// import Galeria from './components/Galeria';
+import Galeria from "./Galeria";
+
 
 const Carta = () => {
+  const images = [
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a1.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a2.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a3.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a4.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a5.jpg"
+  ];
+  const images2 = [
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b1.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b2.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b3.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b4.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b5.jpg"
+  ];
+  const images3 = [
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c4.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c3.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c2.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c1.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b5.jpg"
+  ];
+  const images4 = [
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p1.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p2.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p3.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p4.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p5.jpg"
+  ];
+  const huevos = [
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a2.jpg",
+  ];
+  const galeriaClass = huevos.length === 1 ? "spanfuera" : "";
+
+  const verde = [
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c1.jpg",
+  ];
+
+
   return (
-    <main className="my-10 p-8 bg-paper-texture text-black font-sans border-b">
+    <main className=" p-8 bg-paper-texture text-black font-sans border-b bg-gradient-border">
       <div className="container mx-auto">
         {/* Sección "Picoteamos algo antes?" */}
         <div className="mb-4">
@@ -41,8 +82,9 @@ const Carta = () => {
             <span className="price">5€</span>
           </div>
         </div>
-
-        {/* Sección "Verde Y Fresco" */}
+        <div>
+            <Galeria images={images} />
+        </div>        {/* Sección "Verde Y Fresco" */}
         <div className="mb-4">
           <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
             Verde Y Fresco
@@ -58,6 +100,9 @@ const Carta = () => {
             <span className="price">7€</span>
           </div>
         </div>
+        <div>
+            <Galeria images={verde} />
+        </div> 
 
         {/* Sección "Que no hay huevos?" */}
         <div className="mb-4">
@@ -75,6 +120,11 @@ const Carta = () => {
             <span className="price">8€</span>
           </div>
         </div>
+        <div>
+        <Galeria className={galeriaClass} images={huevos} />
+
+     
+        </div> 
 
         {/* Sección "Seguimos Compartiendo o cada uno a lo suyo?" */}
         <div className="mb-4">
@@ -142,6 +192,9 @@ const Carta = () => {
             <span className="price">14€</span>
           </div>
         </div>
+        <div>
+            <Galeria images={images2} />
+        </div> 
 
         {/* Sección "Rematamos y ya lo tenemos Bien" */}
         <div className="mb-4">
@@ -179,6 +232,9 @@ const Carta = () => {
             <span className="price">22€</span>
           </div>
         </div>
+        <div>
+            <Galeria images={images3} />
+        </div> 
 
         {/* Sección "Y para el niño que tenéis?" */}
         <div className="mb-4">
@@ -220,6 +276,9 @@ const Carta = () => {
               Todo Con Patatas Fritas*
              </span>
         </div>
+        <div>
+            <Galeria images={images4} />
+        </div> 
        
             
           

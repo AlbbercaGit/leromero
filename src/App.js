@@ -25,8 +25,8 @@ function App() {
         <Videom />
         <Header />
         <Hero />
+        <Donde />
         <Sticky />
-        {/* <Donde /> */}
 
         </ReactLenis>
 

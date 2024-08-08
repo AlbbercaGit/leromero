@@ -64,12 +64,17 @@
   .fullHeight {
   height: 80%;
 }
+.spanfuera {
+  display: none;
+}
+
+
 
 
 .bg-paper-texture {
   /* background-image: url('../public/img/paper2.jpg'); Ajusta el path según donde guardaste la imagen */
   background-size: fill;
-  background-color: #fffff0;
+  background-color: rgb(255, 255, 240);
   /* background-repeat: no-repeat; */
 }
 .bg-izq{
@@ -89,6 +94,16 @@ background-position: right ;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#fffff0",GradientType=1);
 }
 
+.bg-gradient-border {
+  border-top: 14px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, rgba(36, 0, 0, 0) 0%, rgba(255,255,240,1) 100%);
+}.bg-gradient-border-bot {
+  border-bottom: 1px solid;
+
+  border-image-slice: 1;
+  background: linear-gradient(180deg, rgba(45, 34, 255, 0) 0%, rgba(255,255,240,1) 100%);
+}
 .price-container {
   display: flex;
   justify-content: space-between;
