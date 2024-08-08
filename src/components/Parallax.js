@@ -9,21 +9,25 @@ const Parallax = () => {
     if (containerRef.current) {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
-
+    
       const containerRect = containerRef.current.getBoundingClientRect();
       const containerTop = containerRect.top + scrollTop;
       const containerHeight = containerRect.height;
-      // const containerBottom = containerTop + containerHeight;
-
+    
       const containerCenter = containerTop + containerHeight / 2;
       const windowCenter = scrollTop + windowHeight / 2;
-
+    
       if (windowCenter <= 1450.1796875 && windowCenter <= 1450.1796875) {
         const distanceFromCenter = Math.abs(windowCenter - containerCenter);
         const visibilityRatio = Math.max(1 - distanceFromCenter / (windowHeight / 2), 0);
+    
 
-        const scaleLimit = 1.5 + visibilityRatio * 3; 
-
+    
+        const scaleLimit = 2.50 + visibilityRatio * 3;
+        if (scaleLimit >= 5.1) {
+          console.log("La imagen ha alcanzado el 100% del height/width del contenedor.");
+          // Realiza alguna acción cuando la imagen esté completamente visible
+        }
         setScale(scaleLimit);
       }
     }
@@ -37,13 +41,14 @@ const Parallax = () => {
   }, []);
 
   return (
-    <main className="h-[100vh] bg-slate-50 flex justify-center items-center overflow-hidden">
+    <main className="h-[100vh]  flex justify-center items-center overflow-hidden">
       <div
         ref={containerRef}
         id="Parallax"
         className="bg-izq bg-cover w-1/5 h-1/5 rounded-md transition-transform duration-[1s] ease-in-out"
         style={{ transform: `scale(${scale})` }}
       ></div>
+      
     </main>
   );
 };
