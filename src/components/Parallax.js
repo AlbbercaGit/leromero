@@ -23,7 +23,7 @@ const Parallax = () => {
     
 
     
-        const scaleLimit = 2.50 + visibilityRatio * 3;
+        const scaleLimit = 2 + visibilityRatio * 3;
         if (scaleLimit >= 5.1) {
           console.log("La imagen ha alcanzado el 100% del height/width del contenedor.");
           // Realiza alguna acción cuando la imagen esté completamente visible
