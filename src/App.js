@@ -5,7 +5,9 @@ import Videom from "./components/VideoBackgroundm";
 import Hero from './components/Hero';
 import Carta from './components/Carta';
 // import Donde from './components/Donde';
-import Parallax from './components/Parallax';
+
+import Sticky from './components/Sticky';
+import Parallax from './components/Parallax2.js';
 import { ReactLenis, useLenis } from 'lenis/react'
 
 
@@ -24,8 +26,9 @@ function App() {
         <Header />
         <Hero />
         </ReactLenis>
+        <Sticky />
+
         <div >
-        <Parallax />
 
         {/* <Donde /> */}
         <Carta />
