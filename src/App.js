@@ -26,7 +26,7 @@ function App() {
         <Header />
         <Hero />
         <Sticky />
-                </ReactLenis>
+        </ReactLenis>
 
         <div >
 

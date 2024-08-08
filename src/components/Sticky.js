@@ -4,6 +4,7 @@ import "../style.css";
 
 const Sticky = () => {
   const SECTION_HEIGHT = 1000;
+  const START_HEIGHT = 1000; // Altura en la que comienza a cambiar el clipPath
 
   const { scrollY } = useScroll();
   const opacity = useTransform(
@@ -14,12 +15,12 @@ const Sticky = () => {
 
   const clip1 = useTransform(
     scrollY,
-    [0, SECTION_HEIGHT * 2],
+    [START_HEIGHT, SECTION_HEIGHT * 2],
     [25, 0]
   );
   const clip2 = useTransform(
     scrollY,
-    [0, SECTION_HEIGHT * 2],
+    [START_HEIGHT, SECTION_HEIGHT * 2],
     [75, 100]
   );
 
@@ -28,7 +29,7 @@ const Sticky = () => {
   useEffect(() => {
     const handleScroll = () => {
       const parallax = document.querySelector(".parallax");
-      const scrollPosition = window.pageY;
+      const scrollPosition = window.pageY; // Corregido a pageYOffset
       parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
     };
 
@@ -37,9 +38,9 @@ const Sticky = () => {
   }, []);
 
   return (
-    <main className="relative w-full h-[335vh] bg-paper-texture">
+    <main className="relative w-full h-[355vh] bg-paper-texture">
       <motion.div
-        className="sticky top-0 h-screen w-full parallax bg-izq bg-cover bg-center bg-no-repeat"
+        className="sticky top-0 h-screen w-full parallax bg-izq bg-cover bg-fixed bg-center bg-no-repeat"
         style={{
           clipPath,
           willChange: "clip-path, opacity",
