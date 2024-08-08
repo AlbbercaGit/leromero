@@ -64,7 +64,7 @@
   .fullHeight {
   height: 80%;
 }
-.spanfuera {
+.spanfuera>button {
   display: none;
 }
 

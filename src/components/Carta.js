@@ -3,35 +3,35 @@ import "../style.css"; // Asegúrate de tener este archivo para estilos personal
 // import Galeria from './components/Galeria';
 import Galeria from "./Galeria";
 
-
 const Carta = () => {
   const images = [
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a5.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a1.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a2.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a3.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a4.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a5.jpg"
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/a11.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/a12.jpg",
   ];
   const images2 = [
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/b12.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b1.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b2.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b3.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b4.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b5.jpg"
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/b11.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/b13.jpg",
   ];
   const images3 = [
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c4.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/c12.jpg",
+
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c3.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c2.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c1.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/b5.jpg"
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/d11.jpg",
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/c11.jpg",
   ];
   const images4 = [
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p1.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p2.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p3.jpg",
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p4.jpg",
-    "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/p5.jpg"
+    "https://raw.githubusercontent.com/AlbbercaGit/videos/12383d43a2c6599858a66d2e2c08a025e67f380d/img/img2/p11.jpg",
   ];
   const huevos = [
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/a2.jpg",
@@ -41,7 +41,6 @@ const Carta = () => {
   const verde = [
     "https://raw.githubusercontent.com/AlbbercaGit/videos/c1797ab9d5b3f8fe534d4dc24a9c5c86c0df3af8/img/c1.jpg",
   ];
-
 
   return (
     <main className=" p-8 bg-paper-texture text-black font-sans border-b bg-gradient-border">
@@ -66,7 +65,8 @@ const Carta = () => {
               Patatas LeRomer
               <br />
               <p className="font-light text-sm">
-                Patatas a lo pobre con nuestra salsa secreta y cientos de cosas más.
+                Patatas a lo pobre con nuestra salsa secreta y cientos de cosas
+                más.
               </p>
             </span>
             <span className="price">3€</span>
@@ -83,8 +83,9 @@ const Carta = () => {
           </div>
         </div>
         <div>
-            <Galeria images={images} />
-        </div>        {/* Sección "Verde Y Fresco" */}
+          <Galeria images={images} />
+        </div>{" "}
+        {/* Sección "Verde Y Fresco" */}
         <div className="mb-4">
           <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
             Verde Y Fresco
@@ -101,13 +102,12 @@ const Carta = () => {
           </div>
         </div>
         <div>
-            <Galeria images={verde} />
-        </div> 
-
+          <Galeria images={verde} />
+        </div>
         {/* Sección "Que no hay huevos?" */}
         <div className="mb-4">
-        <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
-        Que no hay huevos?
+          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
+            Que no hay huevos?
           </h2>
           <div className="price-container mb-3 text-2xl ">
             <span className="pr-4 ">
@@ -121,15 +121,12 @@ const Carta = () => {
           </div>
         </div>
         <div>
-        <Galeria className={galeriaClass} images={huevos} />
-
-     
-        </div> 
-
+          <Galeria className={galeriaClass} images={huevos} />
+        </div>
         {/* Sección "Seguimos Compartiendo o cada uno a lo suyo?" */}
         <div className="mb-4">
-        <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
-        Seguimos Compartiendo o cada uno a lo suyo?
+          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
+            Seguimos Compartiendo o cada uno a lo suyo?
           </h2>
           <div className="price-container mb-3 text-2xl">
             <span className="pr-4">
@@ -193,13 +190,12 @@ const Carta = () => {
           </div>
         </div>
         <div>
-            <Galeria images={images2} />
-        </div> 
-
+          <Galeria images={images2} />
+        </div>
         {/* Sección "Rematamos y ya lo tenemos Bien" */}
         <div className="mb-4">
-        <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
-        Rematamos y ya lo tenemos Bien
+          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
+            Rematamos y ya lo tenemos Bien
           </h2>
           <div className="price-container mb-3 text-2xl">
             <span className="pr-4">
@@ -233,13 +229,12 @@ const Carta = () => {
           </div>
         </div>
         <div>
-            <Galeria images={images3} />
-        </div> 
-
+          <Galeria images={images3} />
+        </div>
         {/* Sección "Y para el niño que tenéis?" */}
         <div className="mb-4">
-        <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
-        Y para el niño que tenéis?
+          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-3xl italic ">
+            Y para el niño que tenéis?
           </h2>
           <div className="price-container mb-3 text-2xl">
             <span className="pr-4">
@@ -263,30 +258,23 @@ const Carta = () => {
           </div>
           <div className="price-container  text-2xl">
             <span className="pr-4">
-              Tortilla de lo que quieras 
+              Tortilla de lo que quieras
               <br />
               <p className="font-light text-sm">
                 Tortilla personalizada con patatas fritas.
               </p>
             </span>
             <span className="price">7€</span>
-            
           </div>
           <span className="mt-10 text-xl  font-semibold">
-              Todo Con Patatas Fritas*
-             </span>
+            Todo Con Patatas Fritas*
+          </span>
         </div>
         <div>
-            <Galeria images={images4} />
-        </div> 
-       
-            
-          
-      
+          <Galeria images={images4} />
+        </div>
       </div>
 
-    
-    
       <footer className="text-center mt-4 text-sm text-gray-500">
         &copy; 2024 Mi Proyecto. Todos los derechos reservados.
       </footer>

@@ -27,13 +27,13 @@ function App() {
         <Hero />
         <Donde />
         <Sticky />
-
+        <Carta />
         </ReactLenis>
 
         <div >
 
         {/* <Donde /> */}
-        <Carta />
+
 
 
 
