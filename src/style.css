@@ -73,7 +73,7 @@
   /* background-repeat: no-repeat; */
 }
 .bg-izq{
-    background-image: url('../public/img/restaurante.jpg');
+    background-image: url('https://raw.githubusercontent.com/AlbbercaGit/videos/0b85648d4566ba293c5782ef7504bea08a709ee2/restaurante.jpg');
   background-size: fill;
 }
 .bg-der{
