@@ -74,7 +74,7 @@
 .bg-paper-texture {
   /* background-image: url('../public/img/paper2.jpg'); Ajusta el path según donde guardaste la imagen */
   background-size: fill;
-  background-color: rgb(255, 255, 240);
+  background-color: #fffff0;
   /* background-repeat: no-repeat; */
 }
 .bg-izq{
@@ -102,7 +102,7 @@ background-position: right ;
   border-bottom: 1px solid;
 
   border-image-slice: 1;
-  background: linear-gradient(180deg, rgba(45, 34, 255, 0) 0%, rgba(255,255,240,1) 100%);
+  background: linear-gradient(180deg, rgba(45, 34, 255, 0) 70%, rgba(255,255,240,1) 100%);
 }
 .price-container {
   display: flex;
