@@ -14,12 +14,12 @@ const Sticky = () => {
 
   const clip1 = useTransform(
     scrollY,
-    [0, SECTION_HEIGHT * 3],
+    [0, SECTION_HEIGHT * 2],
     [25, 0]
   );
   const clip2 = useTransform(
     scrollY,
-    [0, SECTION_HEIGHT * 3],
+    [0, SECTION_HEIGHT * 2],
     [75, 100]
   );
 
@@ -37,7 +37,7 @@ const Sticky = () => {
   }, []);
 
   return (
-    <main className="relative w-full h-[380vh] bg-paper-texture">
+    <main className="relative w-full h-[335vh] bg-paper-texture">
       <motion.div
         className="sticky top-0 h-screen w-full parallax bg-izq bg-cover bg-center bg-no-repeat"
         style={{

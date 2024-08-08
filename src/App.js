@@ -25,8 +25,8 @@ function App() {
         <Videom />
         <Header />
         <Hero />
-        </ReactLenis>
         <Sticky />
+                </ReactLenis>
 
         <div >
 
