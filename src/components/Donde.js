@@ -5,12 +5,7 @@ import Parallax from "./Parallax";
 const Donde = () => {
   return (
     <main className="bg-paper-texture  h-[160vh] w-full flex flex-col my-10  bg-paper-texture text-black font-sans ">
-<div>
 
- <div className="h-screen flex items-center justify-center bg-red-300">
- <Parallax />
- </div>
-</div>
 
       <div className="w-full h-full flex items-center justify-center">
       <div className="bg-izq   bg-cover bg-fixed bg-left bg-no-repeat shadow-2xl w-full rounded-[80px] h-full"></div>

@@ -4,7 +4,7 @@ import Video from "./components/VideoBackground";
 import Videom from "./components/VideoBackgroundm";
 import Hero from './components/Hero';
 import Carta from './components/Carta';
-// import Donde from './components/Donde';
+import Donde from './components/Donde';
 
 import Sticky from './components/Sticky';
 import Parallax from './components/Parallax2.js';
@@ -26,6 +26,8 @@ function App() {
         <Header />
         <Hero />
         <Sticky />
+        <Donde />
+
         </ReactLenis>
 
         <div >

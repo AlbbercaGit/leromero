@@ -40,7 +40,7 @@ const Sticky = () => {
   return (
     <main className="relative w-full h-[355vh] bg-paper-texture">
       <motion.div
-        className="sticky top-0 h-screen w-full parallax bg-izq bg-cover bg-fixed bg-center bg-no-repeat"
+        className="sticky top-0 h-screen w-full parallax bg-izq bg-cover sm:bg-fixed bg-center bg-no-repeat"
         style={{
           clipPath,
           willChange: "clip-path, opacity",
