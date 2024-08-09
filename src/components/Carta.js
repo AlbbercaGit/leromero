@@ -275,9 +275,6 @@ const Carta = () => {
         </div>
       </div>
 
-      <footer className="text-center mt-4 text-sm text-gray-500">
-        &copy; 2024 Mi Proyecto. Todos los derechos reservados.
-      </footer>
     </main>
   );
 };

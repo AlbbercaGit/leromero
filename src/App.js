@@ -15,6 +15,7 @@ import { ReactLenis, useLenis } from "lenis/react";
 
 import "./output.css";
 import "./style.css";
+import Footer from "./components/Footer";
 
 function App() {
   const lenis = useLenis(({ scroll }) => {
@@ -30,6 +31,7 @@ function App() {
         <Sticky />
         <Carta />
         <Calendario id="Calendario"/>
+        <Footer />
       </ReactLenis>
     </div>
   );

@@ -18,11 +18,14 @@ const Calendario = () => {
 
   return (
     <main className="h-[100vh] flex flex-col justify-center items-center bg-paper-texture font-sans "id="Calendario">
-      <div className="h-full w-full flex flex-col justify-center items-center italic gap-2 ">
+      <div className="h-full w-full flex flex-col justify-center items-center italic gap-5 ">
+        <div className="h-auto flex items-center justify-center">
         <h2 className="text-center font-light mb-10 underlinecarta text-3xl  w-full">
           ¿Te apetece pasarte un rato?
         </h2>
-        <div className=" px-2 flex w-4/5 items-center justify-center rounded border  border-black font-sans font-light text-base ">
+        </div>
+
+        <div className=" px-2 h-[5%] flex w-4/5 items-center justify-center rounded border  border-black font-sans font-light text-base ">
           <p className=" w-4/5">¿Cuantos Seremos?</p>
           <Button
             isIconOnly
@@ -44,7 +47,7 @@ const Calendario = () => {
             +
           </Button>
         </div>
-        <div className=" px-2 flex w-4/5 items-center justify-center rounded border border-black font-sans font-light text-base ">
+        <div className=" px-2 flex h-[5%] w-4/5 items-center justify-center rounded border border-black font-sans font-light text-base ">
           <p className="w-3/5">¿Donde comemos?</p>
           <Button className="w-auto bg-transparent flex text-base" size="sm">
             <p className=" underline-button flex justify-center text-sm items-center gap-2">
@@ -57,7 +60,7 @@ const Calendario = () => {
             </p>
           </Button>
         </div>
-        <div className=" px-2 flex w-4/5 items-center justify-center rounded border border-black font-sans font-light text-base ">
+        <div className=" px-2 flex h-[5%] w-4/5 items-center justify-center rounded border border-black font-sans font-light text-base ">
           <p className="w-3/5">¿En que turno?</p>
           <Button className="w-auto p-0 bg-transparent flex text-sm" size="sm">
             <p className=" underline-button flex justify-center items-center gap-2">
@@ -75,12 +78,12 @@ const Calendario = () => {
             </p>
           </Button>
         </div>
-        <div className=" px-2 flex w-4/5 items-center justify-center rounded  font-sans font-light text-base ">
+        <div className=" px-2 h-[10%] flex w-4/5 items-center justify-center rounded  font-sans font-light text-base ">
           <p className="w-full flex justify-center text-center">
             Si viene con un niño y necesita trona añadalo como una persona más.
           </p>
         </div>
-        <div className=" px-2 flex w-4/5  items-start justify-start rounded  font-sans font-light text-base ">
+        <div className=" px-2 h-[8%] flex w-4/5  items-start justify-start rounded  font-sans font-light text-base ">
         <h2 className="text-center font-light mb-2 underlinecarta text-2xl  w-full">
           ¿Que dia?
         </h2>
@@ -88,7 +91,7 @@ const Calendario = () => {
         <div className=" px-2 flex h-auto items-center justify-center rounded font-sans font-light text-base ">
           <Calendar className="" aria-label="Date (No Selection)" />
         </div>
-        <div className=" px-2 flex w-3/5 flex-col items-center  rounded  font-sans font-light text-base ">
+        <div className=" p-3 flex w-3/5 flex-col items-center  rounded  font-sans font-light text-base ">
           <p className="w-full flex  text-left">
             Tenemos hueco
           </p>
