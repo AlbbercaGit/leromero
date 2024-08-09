@@ -29,7 +29,7 @@ function App() {
         <Hero />
         <Sticky />
         <Carta />
-        <Calendario />
+        <Calendario id="Calendario"/>
       </ReactLenis>
     </div>
   );

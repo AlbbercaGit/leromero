@@ -1,8 +1,61 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef  } from "react";
 // import Video from "./VideoBackground";
 // import Videom from "./VideoBackgroundm";
 
 const Hero = () => {
+
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const headerElement = headerRef.current;
+
+    // Asegúrate de que el header sea visible al cargar la página
+    headerElement.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    // Añade el evento de finalización de animación
+    const handleAnimationEnd = () => {
+      headerElement.classList.add('hidden'); // Asegura que el elemento quede oculto y no ocupe espacio
+    };
+
+    headerElement.addEventListener('animationend', handleAnimationEnd);
+
+    return () => {
+      headerElement.removeEventListener('animationend', handleAnimationEnd);
+    };
+  }, []);
+
+  // Función para manejar el desplazamiento suave
+  const handleSmoothScroll = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      let offset;
+      const windowWidth = window.innerWidth;
+      
+
+      // Ajustar el vh basado en el tamaño de la ventana
+      if (windowWidth < 768) {
+        // Pantallas pequeñas (móviles)
+        offset = window.innerHeight * 0.05; // 15vh
+      } else if (windowWidth < 1200) {
+        // Pantallas medianas (tabletas)
+        offset = window.innerHeight * 0.065; // 10vh
+      }
+      else if (windowWidth < 1500) {
+        // Pantallas medianas (tabletas)
+        offset = window.innerHeight * 0.1; // 10vh
+      } else {
+        // Pantallas grandes (escritorio)
+        offset = window.innerHeight * 0.07; // 5vh
+      }
+
+      // Calcular la posición de desplazamiento de forma absoluta
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  };
+
+
   useEffect(() => {
     const buttons = document.querySelectorAll(".underline-button2");
     buttons.forEach(button => {
@@ -11,14 +64,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <main className="max-h-[100vh]">
+    <main className="max-h-[100vh]" ref={headerRef}>
       <div className=" h-[100vh] text-white w-full flex items-center justify-center flex-col  relative top-0 font-sans">
         <div className="flex flex-col w-full h-full items-center justify-center">
           <h1 className="text-white text-3xl flex h-full w-full items-end justify-center m-10">
             ¿Y ahora que?
           </h1>
           <nav className="text-white flex h-full w-full justify-center items-start text-2xl gap-10">
-            <button className="font-sans py-2 px-4 underline-button2">Reservas</button>
+          <a href="#Calendario" onClick={(event) => handleSmoothScroll(event, "Calendario")}>
+
+            <button className="font-sans py-2 px-4 underline-button2">Reservas
+            </button>
+            </a>
+
             <button className="font-sans py-2 px-4 underline-button2">Carta</button>
           </nav>
           <div className="flex flex-col h-full w-full items-center justify-center text-xl bg-repeat-x ">
