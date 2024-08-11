@@ -1,11 +1,5 @@
 /* Estilos para el subrayado animado */
-.underline-button {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
-    
-  }
+
 
   .underline-button2 {
     position: relative;
@@ -30,8 +24,45 @@
     width: 65%;
     transform: translateX(-50%) scaleX(1);
   }
+  .underline-button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+    
+  }
+
+  .underline-button:hover::after {
+    width: 100%;
+    transform: translateX(-50%) scaleX(1); /* Ajusta la escala al 100% desde el centro */
+  }
   
   .underline-button::after {
+    content: "";
+    position: absolute;
+    /* height: 1px; */
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px; /* Tamaño del subrayado */
+    background-color: white; /* Color del subrayado */
+    transform: translateX(-50%) scaleX(0); /* Posiciona el pseudo-elemento en el centro y escala desde 0 */
+    transform-origin: center;
+    transition: width 0.3s ease, transform 0.3s ease;
+  }
+  .underline-buttondark {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+    
+  }
+
+  .underline-buttondark:hover::after {
+    width: 100%;
+    transform: translateX(-50%) scaleX(1); /* Ajusta la escala al 100% desde el centro */
+  }
+  .underline-buttondark::after {
     content: "";
     position: absolute;
     /* height: 1px; */
@@ -57,10 +88,7 @@
     height: 1px; /* Grosor del subrayado */
     background: linear-gradient(to right, rgba(0,0,0,0), currentColor 20%, currentColor 80%, rgba(0,0,0,0));  }
   
-  .underline-button:hover::after {
-    width: 100%;
-    transform: translateX(-50%) scaleX(1); /* Ajusta la escala al 100% desde el centro */
-  }
+ 
 
   .fullHeight {
   height: 80%;

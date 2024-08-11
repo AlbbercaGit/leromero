@@ -5,35 +5,50 @@ import Video from "./components/VideoBackground";
 import Videom from "./components/VideoBackgroundm";
 import Hero from "./components/Hero";
 import Carta from "./components/Carta";
-
-
 import Sticky from "./components/Sticky";
 import Calendario from "./components/Calendario";
-
-// import Parallax from './components/Parallax2.js';
 import { ReactLenis, useLenis } from "lenis/react";
-
 import "./output.css";
 import "./style.css";
 import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";  
 
-function App() {
+function AppContent() {
+  
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
-  });
+  },[]);
+  const location = useLocation();
+
   return (
     <div className="flex flex-col min-h-screen">
       <ReactLenis root>
-        <Video />
-        <Videom />
-        <Header />
-        <Hero />
-        <Sticky />
-        <Carta />
-        <Calendario id="Calendario"/>
+      <ScrollToTop />
+        <Header id="header" />
+        {location.pathname === '/Calendario' ? (
+          <Calendario />
+        ) : location.pathname === '/Carta' ? (
+          <Carta />
+        ) : location.pathname === '/' ? (
+          <>
+            <Video />
+            <Videom />
+            <Hero />
+            <Sticky />
+          </>
+        ) : null}[location]
         <Footer />
       </ReactLenis>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   );
 }
 

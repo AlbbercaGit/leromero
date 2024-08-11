@@ -17,7 +17,7 @@ const Calendario = () => {
   ];
 
   return (
-    <main className=" h-[100vh] flex flex-col justify-center items-center bg-paper-texture font-sans "id="Calendario">
+    <main  className=" h-[90vh] flex flex-col justify-center items-center bg-paper-texture font-sans "id="Calendario">
       <div className="h-full w-full flex flex-col justify-center items-center italic gap-5 ">
 
       <div className="h-[10vh] flex items-center justify-center ">

@@ -1,16 +1,41 @@
 // Header.js
-import React, { useState } from 'react';
-import 'tailwindcss/tailwind.css';
+import React, { useState, useEffect } from "react";
+import "tailwindcss/tailwind.css";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  const [forceUpdate, setForceUpdate] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const elemento = document.getElementById('Carta') || document.getElementById('Calendario')|| document.getElementById('Hero');
+
+    if (elemento) {
+      const estilo = window.getComputedStyle(elemento);
+      const colorDeFondo = estilo.backgroundColor;
+      console.log('El color de fondo es:', colorDeFondo);
+      setIsDark(colorDeFondo === 'rgb(255, 255, 240)');
+    }
+  }, [location, forceUpdate]);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleLinkClick = () => {
+    setForceUpdate(prev => !prev);
+  };
+
   return (
-    <header className="h-[10vh] p-4 bg-transparent text-white font-sans border-b ital border-white relative z-20">
+    <header
+      id="header"
+      className={`h-[10vh] p-4 bg-transparent font-sans border-b ital relative z-20 ${
+        isDark ? 'text-black border-black' : 'text-white border-white'
+      }`}
+    >
       <div className="container h-full grid grid-cols-3 items-center px-4">
         <div className="flex justify-start"></div>
         <div className="flex justify-center col-span-1">
@@ -19,32 +44,80 @@ const Header = () => {
         <div className="flex justify-end">
           <button
             onClick={toggleMenu}
-            className={`text-white text-2xl md:hidden transition-transform duration-300 ease-in-out z-20`}
+            className={`text-2xl md:hidden transition-transform duration-300 ease-in-out z-20 ${
+              isDark ? 'text-black' : 'text-white'
+            }`}
           >
             <span
-              className={`block w-6 h-0.5 bg-white transform transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}
+              className={`block w-6 h-0.5 transform transition-transform duration-300 ease-in-out ${
+                isOpen ? 'rotate-45 translate-y-1.5' : ''
+              } ${isDark ? 'bg-black' : 'bg-white'}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-white my-1 transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}
+              className={`block w-6 h-0.5 my-1 transition-opacity duration-300 ease-in-out ${
+                isOpen ? 'opacity-0' : ''
+              } ${isDark ? 'bg-black' : 'bg-white'}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-white transform transition-transform duration-300 ease-in-out ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}
+              className={`block w-6 h-0.5 transform transition-transform duration-300 ease-in-out ${
+                isOpen ? '-rotate-45 -translate-y-1.5' : ''
+              } ${isDark ? 'bg-black' : 'bg-white'}`}
             />
           </button>
         </div>
         <nav className="hidden md:flex md:items-center col-span-3 justify-center">
           <ul className="flex space-x-4">
-            <li><a href="#about" className="hover:underline">Reservar</a></li>
-            <li><a href="#contact" className="hover:underline">Contacto</a></li>
+            <li>
+              <a href="#about" className="hover:underline">
+                Reservar
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:underline">
+                Contacto
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
-      <div className={`fixed inset-0 bg-transparent backdrop-blur-md transition-opacity duration-700 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0'} ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center justify-center`}>
-        <div className="relative w-full h-4/5 flex items-center justify-center text-white">
+      <div
+        className={`fixed inset-0 bg-transparent backdrop-blur-md transition-opacity duration-700 ease-in-out ${
+          isOpen ? 'opacity-100' : 'opacity-0'
+        } ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center justify-center`}
+      >
+        <div className={`relative w-full h-4/5 flex items-center justify-center ${isDark ? 'text-black border-black' : 'text-white border-white'}`}>
           <nav className="flex flex-col items-center text-center text-2xl">
             <ul className="space-y-4">
-              <li><a href="#about" className="text-3xl font-sans py-2 px-4 underline-button" onClick={toggleMenu}>Reservar</a></li>
-              <li><a href="#contact" className="text-3xl font-sans py-2 px-4 underline-button" onClick={toggleMenu}>Contacto</a></li>
+              <li className={``}>
+                <Link
+                  to="/"
+                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
+                  onClick={() => {
+                    toggleMenu();
+                    handleLinkClick();
+                  }}
+                >
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Calendario"
+                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
+                  onClick={toggleMenu}
+                >
+                  Reservar
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Carta"
+                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
+                  onClick={toggleMenu}
+                >
+                  Carta
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

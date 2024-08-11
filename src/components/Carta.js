@@ -3,6 +3,9 @@ import "../style.css"; // Asegúrate de tener este archivo para estilos personal
 // import Galeria from './components/Galeria';
 import Galeria from "./Galeria";
 import {Image} from "@nextui-org/image";
+import Header from "./Header";
+
+
 
 const Carta = () => {
   const images = [
@@ -44,7 +47,8 @@ const Carta = () => {
   ];
 
   return (
-    <main className=" px-8 pt-5 bg-paper-texture text-black font-sans border-b bg-gradient-border">
+    
+    <main id="Carta" className=" px-8 pt-5 bg-paper-texture text-black font-sans border-b bg-gradient-border">
       <div className="container mx-auto">
         {/* Sección "Picoteamos algo antes?" */}
         <div className="mb-4">
