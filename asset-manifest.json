@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/leromero/static/css/main.40bf5fa8.css",
-    "main.js": "/leromero/static/js/main.124f390c.js",
+    "main.css": "/leromero/static/css/main.2d201d0e.css",
+    "main.js": "/leromero/static/js/main.e4db2dc5.js",
     "static/js/453.682459da.chunk.js": "/leromero/static/js/453.682459da.chunk.js",
-    "static/media/limon.jpg": "/leromero/static/media/limon.a228dd3920f2f99fa6a1.jpg",
+    "static/media/grande.jpg": "/leromero/static/media/grande.2bd4768acc8b4cdbb750.jpg",
     "static/media/bear.webm": "/leromero/static/media/bear.e0bf3e171d28636d6e3b.webm",
+    "static/media/larga.jpg": "/leromero/static/media/larga.70ea7d976f0d599d558e.jpg",
     "static/media/fa-solid-900.ttf": "/leromero/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/leromero/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/leromero/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
@@ -14,12 +15,12 @@
     "static/media/fa-v4compatibility.ttf": "/leromero/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/leromero/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/leromero/index.html",
-    "main.40bf5fa8.css.map": "/leromero/static/css/main.40bf5fa8.css.map",
-    "main.124f390c.js.map": "/leromero/static/js/main.124f390c.js.map",
+    "main.2d201d0e.css.map": "/leromero/static/css/main.2d201d0e.css.map",
+    "main.e4db2dc5.js.map": "/leromero/static/js/main.e4db2dc5.js.map",
     "453.682459da.chunk.js.map": "/leromero/static/js/453.682459da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40bf5fa8.css",
-    "static/js/main.124f390c.js"
+    "static/css/main.2d201d0e.css",
+    "static/js/main.e4db2dc5.js"
   ]
 }
