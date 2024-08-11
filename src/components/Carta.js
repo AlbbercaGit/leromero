@@ -2,6 +2,7 @@ import React from "react";
 import "../style.css"; // Asegúrate de tener este archivo para estilos personalizados
 // import Galeria from './components/Galeria';
 import Galeria from "./Galeria";
+import {Image} from "@nextui-org/image";
 
 const Carta = () => {
   const images = [
@@ -82,12 +83,12 @@ const Carta = () => {
             <span className="price">5€</span>
           </div>
         </div>
-        <div>
+        <div className="flex justify-center items-center">
           <Galeria images={images} />
         </div>{" "}
         {/* Sección "Verde Y Fresco" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
             Verde Y Fresco
           </h2>
           <div className="price-container mb-3 text-lg">
@@ -106,7 +107,7 @@ const Carta = () => {
         </div>
         {/* Sección "Que no hay huevos?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
             Que no hay huevos?
           </h2>
           <div className="price-container mb-3 text-lg ">
@@ -125,7 +126,7 @@ const Carta = () => {
         </div>
         {/* Sección "Seguimos Compartiendo o cada uno a lo suyo?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
             Seguimos Compartiendo o cada uno a lo suyo?
           </h2>
           <div className="price-container mb-3 text-lg">
@@ -194,7 +195,7 @@ const Carta = () => {
         </div>
         {/* Sección "Rematamos y ya lo tenemos Bien" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
             Rematamos y ya lo tenemos Bien
           </h2>
           <div className="price-container mb-3 text-lg">
@@ -233,7 +234,7 @@ const Carta = () => {
         </div>
         {/* Sección "Y para el niño que tenéis?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-8 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
             Y para el niño que tenéis?
           </h2>
           <div className="price-container mb-3 text-lg">
