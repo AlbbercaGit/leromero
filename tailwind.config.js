@@ -12,8 +12,8 @@ module.exports = {
         zeyada: ['Zeyada', 'cursive'], // Añade esta línea
       },
       backgroundImage: {
-        'botom': "url('./im1.png')",
-        'topom': "url('./im2.png')",
+        // 'botom': "url('./im1.png')",
+        // 'topom': "url('./im2.png')",
       }
     },
   },

@@ -110,10 +110,21 @@
     background-image: url('https://raw.githubusercontent.com/AlbbercaGit/videos/0b85648d4566ba293c5782ef7504bea08a709ee2/restaurante.jpg');
   background-size: fill;
 }
+.bg-grande{
+  background-image: url('../public/img/grande.jpg');
+  /* background-attachment: fixed; */
+
+  /* background-position: 60%; Ajusta según sea necesario */
+  background-repeat: no-repeat;
+  background-size: cover; 
+
+}
 .bg-der{
-  background-image: url('../public/img/limon.jpg');
-/* background-size: 100%; */
-background-position: right ;
+  background-image: url('../public/img/larga.jpg');
+  /* background-attachment: fixed; */
+
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 .bg-gradient {
   background: rgb(2, 0, 36);

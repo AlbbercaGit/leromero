@@ -7,6 +7,11 @@ import Hero from "./components/Hero";
 import Carta from "./components/Carta";
 import Sticky from "./components/Sticky";
 import Calendario from "./components/Calendario";
+import Visitanos from "./components/Visitanos";
+import Propuesta from "./components/Propuesta";
+import Mapa from "./components/Mapa";
+
+
 import { ReactLenis, useLenis } from "lenis/react";
 import "./output.css";
 import "./style.css";
@@ -36,6 +41,9 @@ function AppContent() {
             <Videom />
             <Hero />
             <Sticky />
+            <Visitanos />
+            <Propuesta />
+            <Mapa />
           </>
         ) : null}
         <Footer />
