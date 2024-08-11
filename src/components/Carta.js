@@ -44,7 +44,7 @@ const Carta = () => {
   ];
 
   return (
-    <main className=" p-8  bg-paper-texture text-black font-sans border-b bg-gradient-border">
+    <main className=" px-8 pt-5 bg-paper-texture text-black font-sans border-b bg-gradient-border">
       <div className="container mx-auto">
         {/* Sección "Picoteamos algo antes?" */}
         <div className="mb-4">

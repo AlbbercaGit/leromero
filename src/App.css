@@ -5,6 +5,9 @@
 .App {
   text-align: center;
 }
+.bg-secondary {
+  background-color: #ff6347; /* O el color que prefieras */
+}
 
 .App-logo {
   height: 40vmin;
