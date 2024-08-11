@@ -37,7 +37,7 @@ function AppContent() {
             <Hero />
             <Sticky />
           </>
-        ) : null}[location]
+        ) : null}
         <Footer />
       </ReactLenis>
     </div>
@@ -46,7 +46,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/leromero">
       <AppContent />
     </BrowserRouter>
   );
