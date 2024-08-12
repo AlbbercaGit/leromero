@@ -4,6 +4,7 @@ import "../style.css"; // Asegúrate de tener este archivo para estilos personal
 import Galeria from "./Galeria";
 import {Image} from "@nextui-org/image";
 import Header from "./Header";
+import AnimacionSalida from "./AnimacionSalida";
 
 
 
@@ -49,6 +50,7 @@ const Carta = () => {
   return (
     
     <main id="Carta" className=" px-8 pt-5 bg-paper-texture text-black font-sans border-b bg-gradient-border">
+<AnimacionSalida />
       <div className="container mx-auto">
         {/* Sección "Picoteamos algo antes?" */}
         <div className="mb-4">

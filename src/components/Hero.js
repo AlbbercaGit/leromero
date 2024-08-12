@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import Calendario from "./Calendario";
-import Carta from "./Carta";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AnimacionEntrada from "./AnimacionEntrada";
 
 const Hero = () => {
   const headerRef = useRef(null);
+  const navigate = useNavigate();
+  const [showAnimation, setShowAnimation] = useState(false);
+  const [navigationPath, setNavigationPath] = useState("");
 
   useEffect(() => {
     const headerElement = headerRef.current;
@@ -24,42 +26,17 @@ const Hero = () => {
     };
   }, []);
 
-  // Función para manejar el desplazamiento suave
-  const handleSmoothScroll = (event, targetId) => {
-    event.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      let offset;
-      const windowWidth = window.innerWidth;
-
-      // Ajustar el vh basado en el tamaño de la ventana
-      if (windowWidth < 768) {
-        // Pantallas pequeñas (móviles)
-        offset = window.innerHeight * 0.05; // 15vh
-      } else if (windowWidth < 1200) {
-        // Pantallas medianas (tabletas)
-        offset = window.innerHeight * 0.065; // 10vh
-      } else if (windowWidth < 1500) {
-        // Pantallas medianas (tabletas)
-        offset = window.innerHeight * 0.1; // 10vh
-      } else {
-        // Pantallas grandes (escritorio)
-        offset = window.innerHeight * 0.07; // 5vh
-      }
-
-      // Calcular la posición de desplazamiento de forma absoluta
-      const targetPosition =
-        targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: targetPosition, behavior: "smooth" });
-    }
+  const handleDelayedNavigation = (path) => {
+    setShowAnimation(true);
+    setTimeout(() => {
+      navigate(path);
+    }, 1000);
   };
 
-  useEffect(() => {
-    const buttons = document.querySelectorAll(".underline-button2");
-    buttons.forEach((button) => {
-      button.classList.add("active");
-    });
-  }, []);
+  const handleAnimationEnd = () => {
+    setShowAnimation(false);
+    navigate(navigationPath);
+  };
 
   return (
     <main className=" max-h-[100vh]" id="Hero" ref={headerRef}>
@@ -69,29 +46,32 @@ const Hero = () => {
             ¿Y ahora que?
           </h1>
           <nav className="text-white flex h-2/5 w-full justify-center items-start text-2xl gap-10">
-            <Link to="/Calendario">
-              <button className="font-sans py-2 px-4 underline-button2">
-                Reservas
-              </button>
-            </Link>
-            <Link to="/Carta">
-              <button className="font-sans py-2 px-4 underline-button2">
-                Carta
-              </button>
-            </Link>
+            <button
+              className="font-sans py-2 px-4 underline-button2"
+              onClick={() => handleDelayedNavigation("/Calendario")}
+            >
+              Reservas
+            </button>
+            <button
+              className="font-sans py-2 px-4 underline-button2"
+              onClick={() => handleDelayedNavigation("/Carta")}
+            >
+              Carta
+            </button>
           </nav>
           <div className="flex flex-col h-full w-full  items-center justify-center text-xl bg-repeat-x ">
             <p className="h-full text-center flex justify-start items-center flex-col ">
               ¿Comemos? 
               
               <div className='flex justify-center items-center h-4/5 w-full '>
-            <div className='flex justify-center items-center  bg-white h-2/5 w-[1px] min-h-6'><p></p></div>
-          </div>
+                <div className='flex justify-center items-center  bg-white h-2/5 w-[1px] min-h-6'><p></p></div>
+              </div>
             </p>
           </div>
           <div className="flex flex-col h-2/5 w-full items-center justify-start text-xl bg-repeat-x bg-gradient"></div>
         </div>
       </div>
+      {showAnimation && <AnimacionEntrada onAnimationEnd={handleAnimationEnd} />}
     </main>
   );
 };

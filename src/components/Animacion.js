@@ -1,27 +1,114 @@
-import { FaInstagram } from "react-icons/fa6";
-import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
-const Footer = () => {
-    const { scrollYProgress } = useScroll();
-    const clip1 = useTransform(scrollYProgress, [0, 1], [100, 100]);
-    const clip2 = useTransform(scrollYProgress, [0, 1], [50, 0]);
-    const clipPath = useMotionTemplate`polygon(0% 0%, ${clip1}% 0%, ${clip1}% ${clip1}%, 0% ${clip1}%)`;
-    
+const FullScreenAnimation = () => {
+    const [isAnimating, setIsAnimating] = useState(true);
+    const [isAnimatingLe, setIsAnimatingLe] = useState(true);
+    const [isAnimatingLeRev, setIsAnimatingLeRev] = useState(true);
+    const [isVisible, setIsVisible] = useState(true);
+    const [isVisibleFondo, setIsVisibleFondo] = useState(true);
+
+
+
+
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsAnimating(false);
+        }, 3300);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisibleFondo(false);
+            console.log('He activado setIsVisibleFondo ');
+        }, 4300); 
+
+        return () => clearTimeout(timer);
+    }, []);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsAnimatingLeRev(false);
+        }, 2500);
+
+        return () => clearTimeout(timer);
+    }, []);
+    useEffect(() => {
+        const timerLe = setTimeout(() => {
+            setIsAnimatingLe(false);
+        }, 500); // Duración de la animación en milisegundos
+
+        return () => clearTimeout(timerLe);
+    }, []);
+
+    useEffect(() => {
+        if (!isAnimatingLeRev) {
+     
+            setIsVisible(false);
+        }
+    }, [isAnimating]);
+
+    // useEffect(() => {
+    //     if (!isAnimating) {
+    //         console.log('He entrado al fondo');
+    //         setIsVisibleFondo(false);
+    //     }
+    // }, [isAnimating]);
     return (
-        <main>
-            <div className='absolute bg-transparent w-full h-[100vh] z-30'>
-                <motion.div className='absolute bg-blue-500 h-full w-full z-40' 
-                    style={{ clipPath }}
-                    initial={{ scale: 1 }}
-                    animate={{  scale: 0 }}
-                    transition={{
-                        type: "spring",
-                        damping: 20
-                    }}>
-                </motion.div>
-            </div>
-        </main>
+        <div className={`w-full h-full ${!isVisibleFondo ? 'hidden' : ''}`}>
+        <motion.div
+            className='fixed top-0 left-0 w-full h-full bg-black z-40'
+            initial={{ scale: 1 }}
+            animate={{ scale: isAnimating ? 1 : 0 }}
+            transition={{
+                type: "spring",
+                damping: 20,
+                duration: 5
+            }}
+            style={{ transformOrigin: 'top left' }} // Cambia el origen de la transformación
+        />
+        <div>
+            
+        <div className={`w-full h-full fixed flex justify-center items-center z-40 font-sans text-5xl ${!isVisible ? 'hidden' : ''}`}>
+
+            <p className={`relative text-white ${!isVisible ? 'hidden' : ''}`}>
+            <motion.div
+            className='absolute top-0 left-0 w-full h-full bg-black z-40'
+            initial={{ scaleX: 1 }}
+            animate={{ scaleX: isAnimatingLe ? 1 : 0}}
+            
+            transition={{
+                type: "spring",
+                damping: 20,
+                duration: 1
+            }}
+            style={{ transformOrigin: ' right' }} 
+            // onAnimationComplete={() => setIsAnimatingSecond(true)} // Inicia la segunda animación
+            // Cambia el origen de la transformación
+        />
+                    <motion.div
+            className='absolute top-0 left-0 w-full h-full bg-black z-40'
+            initial={{ scaleX: 1 }}
+            animate={{ scaleX: isAnimatingLeRev ? 0 : 1}}
+            
+            transition={{
+                type: "spring",
+                damping: 20,
+                duration: 1
+            }}
+            style={{ transformOrigin: ' right' }} 
+            // onAnimationComplete={() => setIsAnimatingSecond(true)} // Inicia la segunda animación
+            // Cambia el origen de la transformación
+        />
+                LeRomer</p>
+        </div>
+        </div>
+        </div>
+
+
     );
 };
 
-export default Footer;
+export default FullScreenAnimation;
