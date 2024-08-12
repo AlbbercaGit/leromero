@@ -11,7 +11,7 @@ const FullScreenAnimation = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsAnimating(false);
-        }, 1000);
+        }, 500);
 
         return () => clearTimeout(timer);
     }, []);
