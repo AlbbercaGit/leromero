@@ -10,6 +10,8 @@ import Calendario from "./components/Calendario";
 import Visitanos from "./components/Visitanos";
 import Propuesta from "./components/Propuesta";
 import Mapa from "./components/Mapa";
+import Animacion from "./components/Animacion";
+
 
 
 import { ReactLenis, useLenis } from "lenis/react";
@@ -30,6 +32,7 @@ function AppContent() {
     <div className="flex flex-col min-h-screen ">
       <ReactLenis root>
       <ScrollToTop />
+      < Animacion />
         <Header  id="header" />
         {location.pathname === '/Calendario' ? (
           <Calendario />
@@ -54,7 +57,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter basename="">
+    <BrowserRouter basename="/leromero">
       <AppContent />
     </BrowserRouter>
   );
