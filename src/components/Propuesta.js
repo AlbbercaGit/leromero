@@ -10,7 +10,7 @@ const Visitanos = () => {
           <h2 className="text-center font-light mb-5 underlinecarta text-3xl  w-auto">
             Nuestra propuesta
           </h2>
-          <p className="p-2">
+          <p className="p-2 mb-5">
             Te invitamos a descubrir los auténticos sabores de nuestra tierra,
             donde cada plato cuenta una historia y cada bocado es un viaje.
             Sumérgete en esta experiencia que combina lo mejor de la cocina
@@ -18,7 +18,7 @@ const Visitanos = () => {
           </p>
           <Link to="/Carta">
 
-          <p className="w-auto flex justify-center  text-xl items-center underlinecarta">
+          <p className="w-auto flex justify-center  text-xl items-center underlinecarta font-bold">
             Carta
           </p>
           </Link>
@@ -32,7 +32,7 @@ const Visitanos = () => {
             Siente la diferencia
           </p>
           <Link to="/Calendario">
-            <p className="w-auto flex justify-center items-center text-xl underlinecarta">
+            <p className="w-auto flex justify-center items-center text-xl underlinecarta font-bold">
               Reservar
             </p>
           </Link>

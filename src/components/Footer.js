@@ -1,8 +1,10 @@
 import React from 'react';
+import { FaInstagram } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
-    <footer className="w-full h-auto text-center mt-4 text-sm text-gray-500 font-sans my-10">
+    <footer className="w-full h-auto text-center mt-4 text-sm text-black font-sans my-10">
       <div className="grid grid-cols-3 grid-rows-[1fr,4fr,1fr] gap-1 justify-center items-center">
         <div className='flex justify-center items-center'>
           <div className='flex justify-center items-center text-center bg-black w-4/5 h-[1px]'></div>
@@ -21,7 +23,9 @@ const Footer = () => {
           </  div>
           </div>        <div className='h-full'>
           <div className='flex flex-col justify-center items-center h-full w-full'>
-            <div className='flex justify-center items-center h-2/5 w-auto'>Insta</div>
+            <div className='flex justify-center items-center h-2/5 w-full'>
+            <a href='https://www.instagram.com/leromergastrobar/'><FaInstagram className='' /> </a>
+           </div>
             <div className='flex justify-center items-center h-3/5 w-full'>
             <div className='flex justify-center items-center  bg-black h-2/5 w-[1px] min-h-6'><p></p></div>
           </div>
