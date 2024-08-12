@@ -1,4 +1,3 @@
-// Header.js
 import React, { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 import { Link, useLocation } from "react-router-dom";
@@ -23,6 +22,18 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    const elemento = document.getElementById('header') || document.getElementById('menu') ||document.getElementById('Carta') || document.getElementById('Calendario')|| document.getElementById('Hero');
+
+    if (!isOpen) {
+      console.log("Abierto");
+      // elemento.style.overflow = 'auto';
+
+    } else {
+      console.log("Cerrado");
+      // elemento.style.overflow = 'hidden';
+
+
+    }
   };
 
   const handleLinkClick = () => {
@@ -32,18 +43,20 @@ const Header = () => {
   return (
     <header
       id="header"
-      className={`h-[10vh] p-4 bg-transparent font-sans border-b ital relative z-20 ${
-        isDark ? 'text-black border-black' : 'text-white border-white'
+      className={` h-[10vh] p-4 bg-transparent font-sans border-b ital relative z-20 ${
+        isDark ? 'text-black border-none  bg-gradientcarta' : 'text-white border-white'
       }`}
     >
-      <div className="container h-full grid grid-cols-3 items-center px-4">
+      <div className=" container h-full grid grid-cols-3 items-center px-4">
         <div className="flex justify-start"></div>
         <div className="flex justify-center col-span-1">
           <h1 className="text-2xl font-bold">LeRomer</h1>
+          
         </div>
         <div className="flex justify-end">
           <button
             onClick={toggleMenu}
+            id="menu"
             className={`text-2xl md:hidden transition-transform duration-300 ease-in-out z-20 ${
               isDark ? 'text-black' : 'text-white'
             }`}

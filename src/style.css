@@ -98,13 +98,19 @@
 }
 
 
-
+.no-scroll {
+  overflow: hidden;
+}
 
 .bg-paper-texture {
   /* background-image: url('../public/img/paper2.jpg'); Ajusta el path según donde guardaste la imagen */
   background-size: fill;
   background-color: #fffff0;
   /* background-repeat: no-repeat; */
+}
+.bg-gradientcarta{
+  background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,240,1) 100%);
 }
 .bg-izq{
     background-image: url('https://raw.githubusercontent.com/AlbbercaGit/videos/0b85648d4566ba293c5782ef7504bea08a709ee2/restaurante.jpg');
@@ -241,6 +247,9 @@
   transition: transform 0.5s ease-out; /* Ajusta la transición para suavizar */
 }
 
+.rotate-90 {
+  transform: rotate(180deg);
+}
 .button {
   width: 10px;
   height: 360px;

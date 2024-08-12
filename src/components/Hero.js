@@ -62,8 +62,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <main className="max-h-[100vh]" id="Hero" ref={headerRef}>
-      <div className=" h-[100vh] text-white w-full flex items-center justify-center flex-col  relative top-0 font-sans">
+    <main className=" max-h-[100vh]" id="Hero" ref={headerRef}>
+      <div className="  h-[100vh] text-white w-full flex items-center justify-center flex-col  relative top-0 font-sans">
         <div className="flex flex-col w-full h-full items-center justify-center">
           <h1 className="text-white text-3xl flex h-3/5 w-full items-end justify-center m-10">
             ¿Y ahora que?
@@ -85,7 +85,7 @@ const Hero = () => {
               ¿Comemos? 
               
               <div className='flex justify-center items-center h-4/5 w-full '>
-            <div className='flex justify-center items-center  bg-white h-4/5 w-[1px] min-h-6'><p></p></div>
+            <div className='flex justify-center items-center  bg-white h-2/5 w-[1px] min-h-6'><p></p></div>
           </div>
             </p>
           </div>

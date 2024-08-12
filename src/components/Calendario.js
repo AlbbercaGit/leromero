@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Calendar } from "@nextui-org/calendar";
 // import {Select, SelectItem} from "@nextui-org/react";
 import { Select, SelectItem } from "@nextui-org/select";
@@ -9,6 +9,17 @@ import style from "../style.css";
 import { MdOutlineTableRestaurant } from "react-icons/md";
 
 const Calendario = () => {
+  const [isCalendarVisible, setIsCalendarVisible] = useState(false);
+  const [count, setCount] = useState(1);
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count > 1 ? count - 1 : 1);
+  const handleButtonClick = () => {
+    if (isCalendarVisible) {
+      setIsCalendarVisible(false);
+    } else {
+      setIsCalendarVisible(true);
+    }  };
+
   const animals = [
     { key: "dog", label: "Dog" },
     { key: "cat", label: "Cat" },
@@ -32,18 +43,22 @@ const Calendario = () => {
             isIconOnly
             className=" bg-transparent p-0 m-0 text-xl "
             size="md"
+            onClick={decrement}
+
           >
             -
           </Button>
           <input
-            defaultValue="1"
-            className="pointer-events-none bg-paper-texture w-5  text-center read-only border-none"
+          value={count}
+          className="pointer-events-none bg-paper-texture w-5  text-center read-only border-none"
             X
           ></input>
           <Button
             isIconOnly
             className="  p-0 m-0  bg-transparent text-xl"
             size="md"
+            onClick={increment}
+
           >
             +
           </Button>
@@ -63,17 +78,18 @@ const Calendario = () => {
         </div>
         <div className=" px-2 flex h-[6vh] w-[85%] space-x-1 items-center justify-center rounded-xl border border-black font-sans font-light text-sm">
           <p className="w-full">¿En que turno?</p>
-          <Button className="w-auto p-0 mx-0  bg-transparent flex text-sm" size="sm">
+          <Button className="w-auto p-0 mx-0  bg-transparent flex text-sm" size="sm"             onClick={handleButtonClick}
+          >
             <p className=" underline-button flex justify-center items-center gap-2">
               Comida
             </p>
           </Button>
-          <Button className="w-auto p-0 bg-transparent flex " size="sm">
+          <Button className="w-auto p-0 bg-transparent flex " size="sm" onClick={handleButtonClick}>
             <p className="underline-button flex justify-center text-sm items-center gap-2">
               Cena
             </p>
           </Button>
-          <Button className="w-auto bg-transparent flex p-0 mx-0" size="sm">
+          <Button className="w-auto bg-transparent flex p-0 mx-0" size="sm" onClick={handleButtonClick}>
             <p className="underline-button flex justify-center text-sm items-center gap-2">
               Ver Todo
             </p>
@@ -85,10 +101,10 @@ const Calendario = () => {
           </p>
         </div>
 
-        <div className=" p-0 m-0 flex w-full h-[35vh] items-center justify-center rounded font-sans font-light text-base ">
-          <Calendar className="h-[35vh]" aria-label="Date (No Selection)" />
+        <div className={`p-0 m-0 ${isCalendarVisible ? 'flex' : 'hidden'}  w-full h-[35vh] items-center justify-center rounded font-sans font-light text-base  `}>
+          <Calendar className="h-[35vh] " aria-label="Date (No Selection)" />
         </div>
-        <div className=" py-1 m-0 flex w-3/5  flex-col items-center  rounded  font-sans font-light text-sm">
+        <div className={` py-1 m-0 ${isCalendarVisible ? 'flex' : 'hidden'} w-3/5  flex-col items-center  rounded  font-sans font-light text-sm`}>
           <p className="w-full flex  text-left">
             Tenemos hueco
           </p>

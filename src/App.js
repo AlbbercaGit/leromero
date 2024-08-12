@@ -27,19 +27,19 @@ function AppContent() {
   const location = useLocation();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <ReactLenis root>
       <ScrollToTop />
-        <Header id="header" />
+        <Header  id="header" />
         {location.pathname === '/Calendario' ? (
           <Calendario />
         ) : location.pathname === '/Carta' ? (
           <Carta />
         ) : location.pathname === '/' ? (
           <>
-            <Video />
+            <Video  />
             <Videom />
-            <Hero />
+            <Hero id="Hero" />
             <Sticky />
             <Visitanos />
             <Propuesta />
@@ -54,7 +54,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter basename="/leromero">
+    <BrowserRouter basename="">
       <AppContent />
     </BrowserRouter>
   );
