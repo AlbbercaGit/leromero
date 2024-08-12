@@ -54,7 +54,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter basename="">
+    <BrowserRouter basename="/leromero">
       <AppContent />
     </BrowserRouter>
   );
