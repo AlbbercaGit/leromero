@@ -31,9 +31,9 @@ const Calendario = () => {
 
   return (
     
-    <main  className=" h-[90vh] flex flex-col justify-center items-center bg-paper-texture font-sans "id="Calendario">
+    <main  className=" h-auto flex flex-col justify-center items-center bg-paper-texture font-sans "id="Calendario">
            <AnimacionSalida />
- <div className="h-full w-full flex flex-col justify-center items-center italic gap-5 ">
+ <div className="min-h-[80vh] w-full flex flex-col justify-center items-center italic gap-5 ">
 
       <div className="h-[10vh] flex items-center justify-center ">
         <h2 className=" text-center font-light underlinecarta text-2xl  w-full">
@@ -108,7 +108,7 @@ const Calendario = () => {
         <div className={`p-0 m-0 ${isCalendarVisible ? 'flex' : 'hidden'}  w-full h-[35vh] items-center justify-center rounded font-sans font-light text-base  `}>
           <Calendar className="h-[35vh] " aria-label="Date (No Selection)" />
         </div>
-        <div className={` py-1 m-0 ${isCalendarVisible ? 'flex' : 'hidden'} w-3/5  flex-col items-center  rounded  font-sans font-light text-sm`}>
+        <div className={` py-1 mb-5 ${isCalendarVisible ? 'flex' : 'hidden'} w-3/5  flex-col items-center  rounded  font-sans font-light text-sm`}>
           <p className="w-full flex  text-left">
             Tenemos hueco
           </p>

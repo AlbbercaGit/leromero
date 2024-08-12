@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation,useNavigate } from "react-router-dom";
+import AnimacionEntrada from "./AnimacionEntrada";
+
 
 const Header = () => {
   const location = useLocation();
   const [forceUpdate, setForceUpdate] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const navigate = useNavigate();
+  const [showAnimation, setShowAnimation] = useState(false);
+  const [navigationPath, setNavigationPath] = useState("");
+
 
   useEffect(() => {
     const elemento = document.getElementById('Carta') || document.getElementById('Calendario')|| document.getElementById('Hero');
@@ -21,6 +27,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
+
     setIsOpen(!isOpen);
     const elemento = document.getElementById('header') || document.getElementById('menu') ||document.getElementById('Carta') || document.getElementById('Calendario')|| document.getElementById('Hero');
 
@@ -38,6 +45,18 @@ const Header = () => {
 
   const handleLinkClick = () => {
     setForceUpdate(prev => !prev);
+  };
+  const handleDelayedNavigation = (path) => {
+    setShowAnimation(true);
+
+    setTimeout(() => {
+      navigate(path);
+    }, 1000);
+  };
+  const handleAnimationEnd = () => {
+
+    setShowAnimation(false);
+    navigate(navigationPath);
   };
 
   return (
@@ -102,39 +121,49 @@ const Header = () => {
           <nav className="flex flex-col items-center text-center text-2xl">
             <ul className="space-y-4">
               <li className={``}>
-                <Link
+                <button
                   to="/"
                   className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
                   onClick={() => {
                     toggleMenu();
                     handleLinkClick();
+                    handleDelayedNavigation("/");
                   }}
                 >
                   Inicio
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
+                <button
                   to="/Calendario"
                   className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
-                  onClick={toggleMenu}
-                >
+                  onClick={() => {
+                    toggleMenu();
+                    handleLinkClick();
+                    handleDelayedNavigation("/");
+                  }}                >
                   Reservar
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
+                <button
                   to="/Carta"
                   className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
-                  onClick={toggleMenu}
-                >
+                  onClick={() => {
+                    toggleMenu();
+                    handleLinkClick();
+                    handleDelayedNavigation("/");
+                  }} 
+                                 >
                   Carta
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>
         </div>
       </div>
+      {showAnimation && <AnimacionEntrada onAnimationEnd={handleAnimationEnd} />}
+
     </header>
   );
 };

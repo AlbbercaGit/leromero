@@ -10,6 +10,7 @@ const FullScreenAnimation = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
+            setIsVisibleFondo(true);
 
             setIsAnimating(false);
         }, 100);
@@ -18,6 +19,7 @@ const FullScreenAnimation = () => {
     }, []);
 
     useEffect(() => {
+
         const timer = setTimeout(() => {
             setIsVisibleFondo(false);
             console.log('He activado setIsVisibleFondo ');
@@ -27,7 +29,7 @@ const FullScreenAnimation = () => {
     }, []);
 
     return (
-        <div id='Entrada' className={`w-full h-full  ${!isVisibleFondo ? 'hidden' : ''}`}>
+        <div id='Entrada' className={`w-full h-full visible  ${!isVisibleFondo ? 'hidden' : 'visible'}`}>
         <motion.div
             className='fixed top-0 left-0 w-full h-full bg-black z-40'
             initial={{ scaleY: 0 }}

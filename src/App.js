@@ -11,6 +11,8 @@ import Visitanos from "./components/Visitanos";
 import Propuesta from "./components/Propuesta";
 import Mapa from "./components/Mapa";
 import Animacion from "./components/Animacion";
+import AnimacionSalida from "./components/AnimacionSalida";
+
 
 
 
@@ -33,6 +35,7 @@ function AppContent() {
       <ReactLenis root>
       <ScrollToTop />
       < Animacion />
+
         <Header  id="header" />
         {location.pathname === '/Calendario' ? (
           <Calendario />
@@ -42,6 +45,7 @@ function AppContent() {
           <>
             <Video  />
             <Videom />
+            <AnimacionSalida />
             <Hero id="Hero" />
             <Sticky />
             <Visitanos />
@@ -57,7 +61,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter basename="/leromero">
+    <BrowserRouter basename="/">
       <AppContent />
     </BrowserRouter>
   );
