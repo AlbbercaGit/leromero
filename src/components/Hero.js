@@ -30,7 +30,7 @@ const Hero = () => {
     setShowAnimation(true);
     setTimeout(() => {
       navigate(path);
-    }, 1000);
+    }, 900);
   };
 
   const handleAnimationEnd = () => {

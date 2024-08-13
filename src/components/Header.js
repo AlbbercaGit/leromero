@@ -57,7 +57,7 @@ const Header = () => {
 
     setTimeout(() => {
       navigate(path);
-    }, 1000);
+    }, 900);
   };
   const handleAnimationEnd = () => {
 
