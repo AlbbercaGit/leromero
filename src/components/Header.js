@@ -12,9 +12,15 @@ const Header = () => {
   const [showAnimation, setShowAnimation] = useState(false);
   const [navigationPath, setNavigationPath] = useState("");
 
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const handleRenderAnimation = () => {
+      setAnimationKey(prevKey => prevKey + 1);
+  };
 
   useEffect(() => {
     const elemento = document.getElementById('Carta') || document.getElementById('Calendario')|| document.getElementById('Hero');
+
 
     if (elemento) {
       const estilo = window.getComputedStyle(elemento);
@@ -127,6 +133,7 @@ const Header = () => {
                   onClick={() => {
                     toggleMenu();
                     handleLinkClick();
+                    handleRenderAnimation();
                     handleDelayedNavigation("/");
                   }}
                 >
@@ -140,7 +147,8 @@ const Header = () => {
                   onClick={() => {
                     toggleMenu();
                     handleLinkClick();
-                    handleDelayedNavigation("/");
+                    handleRenderAnimation();
+                    handleDelayedNavigation("/Calendario");
                   }}                >
                   Reservar
                 </button>
@@ -152,9 +160,9 @@ const Header = () => {
                   onClick={() => {
                     toggleMenu();
                     handleLinkClick();
-                    handleDelayedNavigation("/");
-                  }} 
-                                 >
+                    handleRenderAnimation();
+                    handleDelayedNavigation("/Carta");
+                  }}                >
                   Carta
                 </button>
               </li>
@@ -162,7 +170,7 @@ const Header = () => {
           </nav>
         </div>
       </div>
-      {showAnimation && <AnimacionEntrada onAnimationEnd={handleAnimationEnd} />}
+      {showAnimation && <AnimacionEntrada onAnimationEnd={handleAnimationEnd} key={animationKey}/>}
 
     </header>
   );

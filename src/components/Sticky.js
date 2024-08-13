@@ -26,15 +26,30 @@ const Sticky = () => {
 
   const clipPath = useMotionTemplate`polygon(${clip1}% ${clip1}%, ${clip2}% ${clip1}%, ${clip2}% ${clip2}%, ${clip1}% ${clip2}%)`;
 
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const parallax = document.querySelector(".parallax");
+  //     const scrollPosition = window.pageY; // Corregido a pageYOffset
+  //     parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+  //   };
+
   useEffect(() => {
     const handleScroll = () => {
       const parallax = document.querySelector(".parallax");
-      const scrollPosition = window.pageY; // Corregido a pageYOffset
-      parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+      if (parallax) {
+        const scrollPosition = window.pageY; // Corregido a pageYOffset
+        parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
+    // return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

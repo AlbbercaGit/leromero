@@ -1,12 +1,33 @@
-import React from "react";
-// import { Image } from "@nextui-org/image";
-import { Link, Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AnimacionEntrada from "./AnimacionEntrada";
 
 const Visitanos = () => {
+  const navigate = useNavigate();
+  const [showAnimation, setShowAnimation] = useState(false);
+  const [navigationPath, setNavigationPath] = useState("");
+  const [animationKey, setAnimationKey] = useState(0);
+
+
+  const handleDelayedNavigation = (path) => {
+    setShowAnimation(true);
+    setNavigationPath(path);
+    setTimeout(() => {
+      navigate(path);
+    }, 700);
+  };
+
+  const handleAnimationEnd = () => {
+    setAnimationKey(prevKey => prevKey + 1);
+    setShowAnimation(false);
+    navigate(navigationPath);
+
+  };
+
   return (
     <main>
-      <div className=" w-full h-[75vh] flex justify-evenly items-center flex-col font-sans">
-        <div className=" w-4/5  h-[40vh] flex justify-center items-center text-center flex-col">
+      <div className=" w-full h-[80vh] flex justify-evenly items-center flex-col font-sans">
+        <div className=" w-4/5  h-[30vh] flex justify-center items-center text-center flex-col">
           <h2 className="text-center font-light mb-5 underlinecarta text-3xl  w-auto">
             Nuestra propuesta
           </h2>
@@ -16,28 +37,30 @@ const Visitanos = () => {
             Sumérgete en esta experiencia que combina lo mejor de la cocina
             local con un toque moderno.
           </p>
-          <Link to="/Carta">
-
-          <p className="w-auto flex justify-center  text-xl items-center underlinecarta font-bold">
+          <button
+            className="w-auto flex justify-center text-xl items-center underlinecarta font-bold"
+            onClick={() => handleDelayedNavigation("/Carta")}
+          >
             Carta
-          </p>
-          </Link>
+          </button>
         </div>
         <div className=" w-full h-[40vh] flex justify-center items-center text-center flex-col">
-          <h2 className="w-full flex justify-center items-center text-center font-light    text-2xl ">
+          <h2 className="w-full flex justify-center items-center text-center font-light text-2xl">
             Tu mesa te espera
           </h2>
 
-          <p className="w-auto  flex justify-center items-center text-center   font-light mb-5  text-3xl">
+          <p className="w-auto flex justify-center items-center text-center font-light mb-5 text-3xl">
             Siente la diferencia
           </p>
-          <Link to="/Calendario">
-            <p className="w-auto flex justify-center items-center text-xl underlinecarta font-bold">
-              Reservar
-            </p>
-          </Link>
+          <button
+            className="w-auto flex justify-center items-center text-xl underlinecarta font-bold"
+            onClick={() => handleDelayedNavigation("/Calendario")}
+          >
+            Reservar
+          </button>
         </div>
       </div>
+      {showAnimation && <AnimacionEntrada onAnimationEnd={handleAnimationEnd} key={animationKey} />}
     </main>
   );
 };
