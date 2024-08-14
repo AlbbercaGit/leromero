@@ -45,7 +45,7 @@ const Hero = () => {
           <h1 className="text-[#ecfffb] text-3xl flex h-3/5 w-full items-end justify-center m-10">
             ¿Y ahora que?
           </h1>
-          <nav className="text-[#c8f9f9] flex h-2/5 w-full justify-center items-start text-2xl gap-10">
+          <nav className="text-[#c9f4f4] flex h-2/5 w-full justify-center items-start text-2xl gap-10">
             <button
               className="font-sans font-semibold  py-2 px-4 underline-button2"
               onClick={() => handleDelayedNavigation("/Calendario")}

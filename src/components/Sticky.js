@@ -55,7 +55,7 @@ const Sticky = () => {
   return (
     
     <main className="relative w-full h-[370vh] bg-paper-texture font-sans">
-      <div className="position absolute  w-full h-[25vh]  flex flex-col items-center justify-center">
+      <div className="position absolute  w-full h-[25vh]  flex flex-col items-center justify-center text-[#5ea3a3]">
       <h1 className=" text-xl text-center ">¿Cansado de la rutina?</h1>
       <h2 className="text-lg  text-center ">¡Ven y desconecta!</h2>
       </div>
@@ -67,10 +67,10 @@ const Sticky = () => {
           willChange: "clip-path, opacity",
         }}
       >
-                    <div className="flex flex-col w-full  items-center h-[20vh] pb-32 justify-center  text-white bg-gradient-border-bot ">
-                    <h2 className="text-sm font-light  px-5 text-left w-full ">Tu otra casa*</h2>
+                    <div className="flex flex-col w-full  items-center h-[20vh] pb-32 justify-center font-medium text-white bg-gradient-border-bot ">
+                    <h2 className="text-sm  px-5 text-left w-full ">Tu otra casa*</h2>
 
-      <h2 className="text-sm font-light  px-5 text-left w-full ">¿Como no vas a desconectar con este ambiente?</h2>
+      <h2 className="text-sm  px-5 text-left w-full ">¿Como no vas a desconectar con este ambiente?</h2>
       {/* <h2 className="text-lg  text-center "></h2> */}
       </div>
       </motion.div>
