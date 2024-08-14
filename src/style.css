@@ -17,11 +17,11 @@
     background-color: white; /* Color del subrayado */
     transform: translateX(-50%) scaleX(0); /* Posiciona el pseudo-elemento en el centro y escala desde 0 */
     transform-origin: center;
-    transition: width 1s ease, transform 1s ease;
+    transition: width 0.6s ease, transform 0.6s ease;
   }
   
-  .underline-button2.active::after {
-    width: 65%;
+  .underline-button2:hover::after {
+    width: 50%;
     transform: translateX(-50%) scaleX(1);
   }
   .underline-button {
@@ -33,7 +33,7 @@
   }
 
   .underline-button:hover::after {
-    width: 100%;
+    width: 90%;
     transform: translateX(-50%) scaleX(1); /* Ajusta la escala al 100% desde el centro */
   }
   
@@ -88,6 +88,18 @@
     height: 1px; /* Grosor del subrayado */
     background: linear-gradient(to right, rgba(0,0,0,0), currentColor 20%, currentColor 80%, rgba(0,0,0,0));  }
   
+    .underlinecartawhite {
+      position: relative;
+      display: inline-block;
+    }
+    .underlinecartawhite::after {
+      content: '';
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      bottom: -13%;
+      height: 1px; /* Grosor del subrayado */
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), currentColor 20%, currentColor 80%, rgba(255, 255, 255, 0));  }
  
 
   .fullHeight {
@@ -111,6 +123,10 @@
 .bg-gradientcarta{
   background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,240,1) 100%);
+}
+.bg-gradientcarta2{
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,240,1) 100%);
 }
 .bg-izq{
     background-image: url('https://raw.githubusercontent.com/AlbbercaGit/videos/0b85648d4566ba293c5782ef7504bea08a709ee2/restaurante.jpg');

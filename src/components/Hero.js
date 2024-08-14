@@ -30,7 +30,7 @@ const Hero = () => {
     setShowAnimation(true);
     setTimeout(() => {
       navigate(path);
-    }, 900);
+    },850);
   };
 
   const handleAnimationEnd = () => {
@@ -47,13 +47,13 @@ const Hero = () => {
           </h1>
           <nav className="text-white flex h-2/5 w-full justify-center items-start text-2xl gap-10">
             <button
-              className="font-sans py-2 px-4 underline-button2"
+              className="font-sans font-semibold  py-2 px-4 underline-button2"
               onClick={() => handleDelayedNavigation("/Calendario")}
             >
               Reservas
             </button>
             <button
-              className="font-sans py-2 px-4 underline-button2"
+              className="font-sans font-semibold py-2 px-4 underline-button2"
               onClick={() => handleDelayedNavigation("/Carta")}
             >
               Carta

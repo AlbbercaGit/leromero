@@ -54,20 +54,20 @@ const Carta = () => {
       <div className="container mx-auto">
         {/* Sección "Picoteamos algo antes?" */}
         <div className="mb-4">
-          <h2 className="text-center font-light mb-10 underlinecarta text-2xl italic w-full">
+          <h2 className="text-center font-light mb-10 underlinecarta text-2xl italic w-full text-neutral-900">
             Picoteamos algo antes?
           </h2>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Tabla de Jamon
               <br />
-              <p className="font-thin fontlig text-sm">
+              <p className="font-thin fontlig text-sm ">
                 Una tabla de jamon que esperabas?
               </p>
             </span>
             <span className="price">2€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Patatas LeRomer
               <br />
@@ -78,7 +78,7 @@ const Carta = () => {
             </span>
             <span className="price">3€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Degustacion De Quesos
               <br />
@@ -94,10 +94,10 @@ const Carta = () => {
         </div>{" "}
         {/* Sección "Verde Y Fresco" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic text-neutral-900">
             Verde Y Fresco
           </h2>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Ensalada de Burrata con Limón
               <br />
@@ -113,10 +113,10 @@ const Carta = () => {
         </div>
         {/* Sección "Que no hay huevos?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic text-neutral-900">
             Que no hay huevos?
           </h2>
-          <div className="price-container mb-3 text-lg ">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4 ">
               Huevo poche trufado y salsa de setas
               <br />
@@ -132,10 +132,10 @@ const Carta = () => {
         </div>
         {/* Sección "Seguimos Compartiendo o cada uno a lo suyo?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic text-neutral-900">
             Seguimos Compartiendo o cada uno a lo suyo?
           </h2>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Croquetas de cecina y queso azul
               <br />
@@ -145,7 +145,7 @@ const Carta = () => {
             </span>
             <span className="price">9€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Mollete de Carilleras Orientales
               <br />
@@ -155,7 +155,7 @@ const Carta = () => {
             </span>
             <span className="price">10€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Morro de Pulpo
               <br />
@@ -165,7 +165,7 @@ const Carta = () => {
             </span>
             <span className="price">12€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Alcachofas cecina y foie
               <br />
@@ -175,7 +175,7 @@ const Carta = () => {
             </span>
             <span className="price">11€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Alitas de pollo rebozadas
               <br />
@@ -185,7 +185,7 @@ const Carta = () => {
             </span>
             <span className="price">6€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Mar y montaña de chipirón y Papada
               <br />
@@ -201,10 +201,10 @@ const Carta = () => {
         </div>
         {/* Sección "Rematamos y ya lo tenemos Bien" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic  text-neutral-900">
             Rematamos y ya lo tenemos Bien
           </h2>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Lomo alto de vaca
               <br />
@@ -214,7 +214,7 @@ const Carta = () => {
             </span>
             <span className="price">20€</span>
           </div>
-          <div className="price-container mb-3 text-lg pr-4">
+          <div className="price-container mb-3 text-base font-semibold ">
             <span className="pr-4">
               Abanico ibérico de Bellota y Chimichurri
               <br />
@@ -224,7 +224,7 @@ const Carta = () => {
             </span>
             <span className="price">25€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Bacalao y manitas
               <br />
@@ -240,10 +240,10 @@ const Carta = () => {
         </div>
         {/* Sección "Y para el niño que tenéis?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic ">
+          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-xl  italic text-neutral-900">
             Y para el niño que tenéis?
           </h2>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Llonganises de Emilio
               <br />
@@ -253,7 +253,7 @@ const Carta = () => {
             </span>
             <span className="price">5€</span>
           </div>
-          <div className="price-container mb-3 text-lg">
+          <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Varitas de merluza
               <br />
@@ -263,7 +263,7 @@ const Carta = () => {
             </span>
             <span className="price">6€</span>
           </div>
-          <div className="price-container  text-lg mb-3">
+          <div className="price-container  text-base font-semibold mb-3">
             <span className="pr-4">
               Tortilla de lo que quieras
               <br />
