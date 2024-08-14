@@ -46,8 +46,8 @@ const FullScreenAnimation = () => {
        initial={{ opacity: 1, scale: 1 }}
        animate={{ opacity: 0, scale: 1 }}
        transition={{
-         duration: 0.25,
-         delay: 0.9,
+         duration: 0.3,
+         delay: 0.85,
          ease: [0, 0.71, 0.2, 1.01]
        }}
         className={`font-sans relative   underlinecartawhite  z-40  text-5xl text-white ${
