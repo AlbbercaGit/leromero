@@ -40,7 +40,7 @@ const Hero = () => {
 
   return (
     <main className=" max-h-[100vh]" id="Hero" ref={headerRef}>
-      <div className="  h-[100vh] text-[#ecfffb] w-full flex items-center justify-center flex-col  relative top-0 font-sans">
+      <div className=" min-h-full h-[100vh] text-[#ecfffb] w-full flex items-center justify-center flex-col  relative top-0 font-sans">
         <div className="flex flex-col w-full h-full items-center justify-center">
           <h1 className="text-[#ecfffb] text-3xl flex h-3/5 w-full items-end justify-center m-10">
             ¿Y ahora que?
