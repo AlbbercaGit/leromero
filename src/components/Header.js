@@ -69,7 +69,7 @@ const Header = () => {
     <header
       id="header"
       className={` h-[10vh] p-4 bg-transparent font-sans border-b ital relative z-20 ${
-        isDark ? 'text-black border-none  bg-gradientcarta' : 'text-[#c8f9f9] border-[#ecfffb]'
+        isDark ? 'text-black border-none  bg-transparent' : 'text-[#c8f9f9] border-[#ecfffb]'
       }`}
     >
       <div className=" container h-full grid grid-cols-3 items-center px-4">
