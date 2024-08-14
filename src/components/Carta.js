@@ -54,7 +54,7 @@ const Carta = () => {
       <div className="container mx-auto">
         {/* Sección "Picoteamos algo antes?" */}
         <div className="mb-4">
-          <h2 className="text-center font-light mb-10 underlinecarta text-2xl italic w-full text-neutral-900">
+          <h2 className="text-center font-medium mb-5 underlinecarta text-xl italic w-full text-neutral-900">
             Picoteamos algo antes?
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
@@ -94,8 +94,8 @@ const Carta = () => {
         </div>{" "}
         {/* Sección "Verde Y Fresco" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic text-neutral-900">
-            Verde Y Fresco
+        <h2 className="text-center font-medium mb-5 underlinecarta text-xl italic w-full text-neutral-900">
+        Verde Y Fresco
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
@@ -113,8 +113,8 @@ const Carta = () => {
         </div>
         {/* Sección "Que no hay huevos?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic text-neutral-900">
-            Que no hay huevos?
+        <h2 className="text-center font-medium mb-5 underlinecarta text-xl italic w-full text-neutral-900">
+        Que no hay huevos?
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4 ">
@@ -132,8 +132,8 @@ const Carta = () => {
         </div>
         {/* Sección "Seguimos Compartiendo o cada uno a lo suyo?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic text-neutral-900">
-            Seguimos Compartiendo o cada uno a lo suyo?
+        <h2 className="text-center font-medium mb-5 underlinecarta text-xl italic w-full text-neutral-900">
+        Seguimos Compartiendo o cada uno a lo suyo?
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
@@ -201,8 +201,8 @@ const Carta = () => {
         </div>
         {/* Sección "Rematamos y ya lo tenemos Bien" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-2xl italic  text-neutral-900">
-            Rematamos y ya lo tenemos Bien
+        <h2 className="text-center font-medium mb-5 underlinecarta text-xl italic w-full text-neutral-900">
+        Rematamos y ya lo tenemos Bien
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
@@ -240,8 +240,8 @@ const Carta = () => {
         </div>
         {/* Sección "Y para el niño que tenéis?" */}
         <div className="mb-4">
-          <h2 className="text-center w-full items-center font-light my-4 underlinecarta text-xl  italic text-neutral-900">
-            Y para el niño que tenéis?
+        <h2 className="text-center font-medium mb-5 underlinecarta text-xl italic w-full text-neutral-900">
+        Y para el niño que tenéis?
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
