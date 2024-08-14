@@ -35,7 +35,6 @@ function AppContent() {
       <ReactLenis root>
       <ScrollToTop />
       < Animacion />
-      <Videom />
         <Header  id="header" />
         {location.pathname === '/Calendario' ? (
           <Calendario />
@@ -44,7 +43,7 @@ function AppContent() {
         ) : location.pathname === '/' ? (
           <>
             <Video  />
-            
+            <Videom />
             <AnimacionSalida />
             <Hero id="Hero" />
             <Sticky />
@@ -61,7 +60,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter basename="/leromero">
+    <BrowserRouter basename="/">
       <AppContent />
     </BrowserRouter>
   );
