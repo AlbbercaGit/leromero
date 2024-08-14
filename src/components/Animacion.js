@@ -34,7 +34,7 @@ const FullScreenAnimation = () => {
   useEffect(() => {
     const timerLe = setTimeout(() => {
       setIsAnimatingLe(false);
-    }, 700); // Duración de la animación en milisegundos
+    }, 1000); // Duración de la animación en milisegundos
 
     return () => clearTimeout(timerLe);
   }, []);
