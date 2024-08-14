@@ -8,7 +8,7 @@ const VideoBackground = () => {
   return (
     <div className="fixed  z-[-1] top-0 left-0 w-full h-[110vh] block md:hidden">
       <video
-        className="absolute top-0 left-0 w-full h-full object-fill"
+        className="absolute top-0 left-0 w-full h-full object-cover"
         src={videoUrl}
         autoPlay
         muted
