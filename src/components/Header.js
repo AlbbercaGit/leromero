@@ -69,7 +69,7 @@ const Header = () => {
     <header
       id="header"
       className={` h-[10vh] p-4 bg-transparent font-sans border-b ital relative z-20 ${
-        isDark ? 'text-black border-none  bg-gradientcarta' : 'text-white border-white'
+        isDark ? 'text-black border-none  bg-gradientcarta' : 'text-[#c8f9f9] border-[#ecfffb]'
       }`}
     >
       <div className=" container h-full grid grid-cols-3 items-center px-4">
@@ -83,23 +83,23 @@ const Header = () => {
             onClick={toggleMenu}
             id="menu"
             className={`text-2xl md:hidden transition-transform duration-300 ease-in-out z-20 ${
-              isDark ? 'text-black' : 'text-white'
+              isDark ? 'text-black' : 'text-[#ecfffb] '
             }`}
           >
             <span
               className={`block w-6 h-0.5 transform transition-transform duration-300 ease-in-out ${
                 isOpen ? 'rotate-45 translate-y-1.5' : ''
-              } ${isDark ? 'bg-black' : 'bg-white'}`}
+              } ${isDark ? 'bg-black' : 'bg-[#ecfffb]'}`}
             />
             <span
               className={`block w-6 h-0.5 my-1 transition-opacity duration-300 ease-in-out ${
                 isOpen ? 'opacity-0' : ''
-              } ${isDark ? 'bg-black' : 'bg-white'}`}
+              } ${isDark ? 'bg-black' : 'bg-[#ecfffb]'}`}
             />
             <span
               className={`block w-6 h-0.5 transform transition-transform duration-300 ease-in-out ${
                 isOpen ? '-rotate-45 -translate-y-1.5' : ''
-              } ${isDark ? 'bg-black' : 'bg-white'}`}
+              } ${isDark ? 'bg-black' : 'bg-[#ecfffb]'}`}
             />
           </button>
         </div>
