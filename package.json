@@ -41,7 +41,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://AlbbercaGit.github.io/leromero",
+  "homepage": "https://AlbbercaGit.github.io/leromer",
   "eslintConfig": {
     "extends": [
       "react-app",

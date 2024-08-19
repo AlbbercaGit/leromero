@@ -68,8 +68,8 @@ const Header = () => {
   return (
     <header
       id="header"
-      className={` h-[10vh] p-4 bg-transparent font-sans border-b ital relative z-20 ${
-        isDark ? 'text-black border-none  bg-transparent' : 'text-[#c8f9f9] border-[#ecfffb]'
+      className={` h-[10vh] p-4 bg-transparent font-sans border-b ital relative z-40 ${
+        isDark ? 'text-[#48bbca] border-none  bg-gradient' : 'text-[#3fb4c4] border-[#ecfffb]'
       }`}
     >
       <div className=" container h-full grid grid-cols-3 items-center px-4">
@@ -82,24 +82,24 @@ const Header = () => {
           <button
             onClick={toggleMenu}
             id="menu"
-            className={`text-2xl md:hidden transition-transform duration-300 ease-in-out z-20 ${
-              isDark ? 'text-black' : 'text-[#ecfffb] '
+            className={`text-2xl md:hidden transition-transform duration-300 ease-in-out z-50 ${
+              isDark ? 'text-[#ff9234]' : 'text-[#3fb4c4] '
             }`}
           >
             <span
               className={`block w-6 h-0.5 transform transition-transform duration-300 ease-in-out ${
                 isOpen ? 'rotate-45 translate-y-1.5' : ''
-              } ${isDark ? 'bg-black' : 'bg-[#ecfffb]'}`}
+              } ${isDark ? 'bg-[#ff9234]' : 'bg-[#ecfffb]'}`}
             />
             <span
               className={`block w-6 h-0.5 my-1 transition-opacity duration-300 ease-in-out ${
                 isOpen ? 'opacity-0' : ''
-              } ${isDark ? 'bg-black' : 'bg-[#ecfffb]'}`}
+              } ${isDark ? 'bg-[#ff9234]' : 'bg-[#ecfffb]'}`}
             />
             <span
               className={`block w-6 h-0.5 transform transition-transform duration-300 ease-in-out ${
                 isOpen ? '-rotate-45 -translate-y-1.5' : ''
-              } ${isDark ? 'bg-black' : 'bg-[#ecfffb]'}`}
+              } ${isDark ? 'bg-[#ff9234]' : 'bg-[#ecfffb]'}`}
             />
           </button>
         </div>
@@ -123,13 +123,13 @@ const Header = () => {
           isOpen ? 'opacity-100' : 'opacity-0'
         } ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'} flex items-center justify-center`}
       >
-        <div className={`relative w-full h-4/5 flex items-center justify-center ${isDark ? 'text-black border-black' : 'text-white border-white'}`}>
+        <div className={`relative w-full h-4/5 flex items-center justify-center ${isDark ? 'text-[#ff9234] border-[#ff9234]' : 'text-[#ecfffb] border-white'}`}>
           <nav className="flex flex-col items-center text-center text-2xl">
             <ul className="space-y-4">
               <li className={``}>
                 <button
                   to="/"
-                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
+                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-[#ff9234] border-[#ff9234] underline-buttondark' : 'text-[#3fb4c4] border-white underline-button'}`}
                   onClick={() => {
                     toggleMenu();
                     handleLinkClick();
@@ -143,7 +143,7 @@ const Header = () => {
               <li>
                 <button
                   to="/Calendario"
-                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
+                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-[#ff9234] border-[#ff9234] underline-buttondark' : 'text-[#3fb4c4] border-white underline-button'}`}
                   onClick={() => {
                     toggleMenu();
                     handleLinkClick();
@@ -156,7 +156,7 @@ const Header = () => {
               <li>
                 <button
                   to="/Carta"
-                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-black border-black underline-buttondark' : 'text-white border-white underline-button'}`}
+                  className={`text-3xl font-sans py-2 px-4  ${isDark ? 'text-[#ff9234] border-[#ff9234] underline-buttondark' : 'text-[#3fb4c4] border-white underline-button'}`}
                   onClick={() => {
                     toggleMenu();
                     handleLinkClick();

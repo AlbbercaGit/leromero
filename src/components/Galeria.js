@@ -62,10 +62,10 @@ const Galeria = ({ images }) => {
           <Button
             onClick={handlePrev}
             isIconOnly
-            className="inline- w-auto h-10 rounded-full bg-white/30 dark:bg-cyan-300-800/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+            className="inline- w-auto h-10 rounded-full bg-[white/30] dark:bg-cyan-300-800/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
           >
             <svg
-              className="w-2 h-3 text-black rtl:rotate-180"
+              className="w-2 h-3 text-[#2d767f] rtl:rotate-180"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -128,8 +128,8 @@ const Galeria = ({ images }) => {
             return (
               <li key={page} aria-label={`page ${page}`} className="w-4 h-4">
                 <button
-                  className={`w-full h-full bg-default-200 rounded-full ${
-                    activePage === page ? "bg-default-400" : ""
+                  className={`w-full h-full bg-[#2d767f] rounded-full ${
+                    activePage === page ? "bg-[#4fcbdb]" : ""
                   }`}
                   onClick={() => {
                     setPage(page);
@@ -151,7 +151,7 @@ const Galeria = ({ images }) => {
             className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-cyan-300-800/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
           >
             <svg
-              className="w-2 h-3 dark:text-teal-white rtl:rotate-180"
+              className="w-2 h-3 text-[#2d767f] rtl:rotate-180"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

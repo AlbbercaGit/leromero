@@ -49,19 +49,19 @@ const Carta = () => {
 
   return (
     
-    <main id="Carta" className=" px-8 pt-5 bg-paper-texture text-black font-sans border-b bg-gradient-border">
+    <main id="Carta" className=" px-8  bg-paper-texture text-[#48bbca] font-sans border-b bg-gradient-border">
 <AnimacionSalida />
       <div className="container mx-auto">
         {/* Sección "Picoteamos algo antes?" */}
         <div className="mb-4">
-          <h2 className="text-center font-medium my-5 underlinecarta text-xl italic w-full text-neutral-900">
+          <h2 className="text-center font-light my-5 underlinecarta text-xl italic w-full text-[#ff9234]">
             Picoteamos algo antes?
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Tabla de Jamon
               <br />
-              <p className="font-thin fontlig text-sm ">
+              <p className="font-thin fontlig text-sm text-[#2d767f] ">
                 Una tabla de jamon que esperabas?
               </p>
             </span>
@@ -71,7 +71,7 @@ const Carta = () => {
             <span className="pr-4">
               Patatas LeRomer
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Patatas a lo pobre con nuestra salsa secreta y cientos de cosas
                 más.
               </p>
@@ -82,7 +82,7 @@ const Carta = () => {
             <span className="pr-4">
               Degustacion De Quesos
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Tabla de quesos franceses, italianos y de nuestra tierra.
               </p>
             </span>
@@ -94,14 +94,14 @@ const Carta = () => {
         </div>{" "}
         {/* Sección "Verde Y Fresco" */}
         <div className="mb-4">
-        <h2 className="text-center font-medium my-5 underlinecarta text-xl italic w-full text-neutral-900">
+        <h2 className="text-center font-light my-5 underlinecarta text-xl italic w-full text-[#ff9234]">
         Verde Y Fresco
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Ensalada de Burrata con Limón
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Burrata fresca con un toque de limón y albahaca.
               </p>
             </span>
@@ -113,14 +113,14 @@ const Carta = () => {
         </div>
         {/* Sección "Que no hay huevos?" */}
         <div className="mb-4">
-        <h2 className="text-center font-medium my-5 underlinecarta text-xl italic w-full text-neutral-900">
+        <h2 className="text-center font-light my-5 underlinecarta text-xl italic w-full text-[#ff9234]">
         Que no hay huevos?
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4 ">
               Huevo poche trufado y salsa de setas
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Huevo pochado con trufa y una suave salsa de setas.
               </p>
             </span>
@@ -132,14 +132,14 @@ const Carta = () => {
         </div>
         {/* Sección "Seguimos Compartiendo o cada uno a lo suyo?" */}
         <div className="mb-4">
-        <h2 className="text-center font-medium my-5 underlinecarta text-xl italic w-full text-neutral-900">
+        <h2 className="text-center font-light my-5 underlinecarta text-xl italic w-full text-[#ff9234]">
         Seguimos Compartiendo o cada uno a lo suyo?
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Croquetas de cecina y queso azul
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Deliciosas croquetas rellenas de cecina y queso azul.
               </p>
             </span>
@@ -149,7 +149,7 @@ const Carta = () => {
             <span className="pr-4">
               Mollete de Carilleras Orientales
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Mollete relleno de carilleras con un toque oriental.
               </p>
             </span>
@@ -159,7 +159,7 @@ const Carta = () => {
             <span className="pr-4">
               Morro de Pulpo
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Pulpo a la parrilla con especias mediterráneas.
               </p>
             </span>
@@ -169,7 +169,7 @@ const Carta = () => {
             <span className="pr-4">
               Alcachofas cecina y foie
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Alcachofas tiernas con cecina y foie.
               </p>
             </span>
@@ -179,7 +179,7 @@ const Carta = () => {
             <span className="pr-4">
               Alitas de pollo rebozadas
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Alitas crujientes con un toque especial.
               </p>
             </span>
@@ -189,7 +189,7 @@ const Carta = () => {
             <span className="pr-4">
               Mar y montaña de chipirón y Papada
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Combinación perfecta de chipirón y papada de cerdo.
               </p>
             </span>
@@ -201,14 +201,14 @@ const Carta = () => {
         </div>
         {/* Sección "Rematamos y ya lo tenemos Bien" */}
         <div className="mb-4">
-        <h2 className="text-center font-medium my-5 underlinecarta text-xl italic w-full text-neutral-900">
+        <h2 className="text-center font-light my-5 underlinecarta text-xl italic w-full text-[#ff9234]">
         Rematamos y ya lo tenemos Bien
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Lomo alto de vaca
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Jugoso lomo alto de vaca a la parrilla.
               </p>
             </span>
@@ -218,7 +218,7 @@ const Carta = () => {
             <span className="pr-4">
               Abanico ibérico de Bellota y Chimichurri
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Abanico ibérico con chimichurri casero.
               </p>
             </span>
@@ -228,7 +228,7 @@ const Carta = () => {
             <span className="pr-4">
               Bacalao y manitas
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Bacalao confitado con manitas de cerdo.
               </p>
             </span>
@@ -240,14 +240,14 @@ const Carta = () => {
         </div>
         {/* Sección "Y para el niño que tenéis?" */}
         <div className="mb-4">
-        <h2 className="text-center font-medium my-5 underlinecarta text-xl italic w-full text-neutral-900">
+        <h2 className="text-center font-light my-5 underlinecarta text-xl italic w-full text-[#ff9234]">
         Y para el niño que tenéis?
           </h2>
           <div className="price-container mb-3 text-base font-semibold">
             <span className="pr-4">
               Llonganises de Emilio
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Llonganises artesanas de la casa Emilio.
               </p>
             </span>
@@ -257,7 +257,7 @@ const Carta = () => {
             <span className="pr-4">
               Varitas de merluza
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Varitas crujientes de merluza fresca.
               </p>
             </span>
@@ -267,7 +267,7 @@ const Carta = () => {
             <span className="pr-4">
               Tortilla de lo que quieras
               <br />
-              <p className="font-light text-sm">
+              <p className="font-light text-sm text-[#2d767f]">
                 Tortilla personalizada con patatas fritas.
               </p>
             </span>

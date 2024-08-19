@@ -26,9 +26,9 @@ const Visitanos = () => {
 
   return (
     <main>
-      <div className=" w-full h-[80vh] flex justify-evenly bg-paper-texture items-center flex-col font-sans text-[#5ea3a3]">
+      <div className=" w-full h-[80vh] flex justify-evenly bg-paper-texture items-center flex-col font-sans text-[#3fb4c4]">
         <div className=" w-4/5  h-[40vh] flex justify-center items-center text-center flex-col">
-          <h2 className="text-center font-light mb-5 underlinecarta text-3xl  w-auto text-[#fcb373]">
+          <h2 className="text-center font-light mb-5 underlinecarta text-3xl  w-auto text-[#ff9234]">
             Nuestra propuesta
           </h2>
           <p className="p-2 font-medium mb-5">
@@ -38,7 +38,7 @@ const Visitanos = () => {
             local con un toque moderno.
           </p>
           <button
-            className="w-auto flex justify-center text-xl items-center underlinecarta font-bold text-[#fcb373]"
+            className="w-auto flex justify-center text-xl items-center underlinecarta font-bold text-[#ff9234]"
             onClick={() => handleDelayedNavigation("/Carta")}
           >
             Carta
@@ -53,7 +53,7 @@ const Visitanos = () => {
             Siente la diferencia
           </p>
           <button
-            className="w-auto flex justify-center items-center text-xl underlinecarta font-bold text-[#fcb373]"
+            className="w-auto flex justify-center items-center text-xl underlinecarta font-bold text-[#ff9234]"
             onClick={() => handleDelayedNavigation("/Calendario")}
           >
             Reservar

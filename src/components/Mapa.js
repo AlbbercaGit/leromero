@@ -15,13 +15,13 @@ const Visitanos = () => {
       };
   return (
  <main >
-<div className="h-[65vh] w-full flex justify-center items-center font-sans flex-col mb-2 bg-paper-texture  text-[#5ea3a3]">
+<div className="h-[65vh] w-full flex justify-center items-center font-sans flex-col mb-0 bg-paper-texture  text-[#3fb4c4]">
 <div className="w-4/5 h-[12vh] flex justify-center items-center flex-col p-5 ">
-    <p className='font-bold text-[#fcb373]  '>Como llegar</p>
+    <p className='font-bold text-[#ff9234]  '>Como llegar</p>
     <p className='text-center'>Av. del País Valencià, 5, 12590 Almenara, Castelló</p>
     </div>
     <div className="w-4/5 h-[12vh] flex justify-center items-center flex-col p-5 my-5">
-    <p className='font-bold text-[#fcb373]  '>Horario</p>
+    <p className='font-bold text-[#ff9234]  '>Horario</p>
     <p>Lunes cerrado.</p>
     <p>M-D 9:30 - 22:00</p>
     </div>

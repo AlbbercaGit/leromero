@@ -53,7 +53,7 @@ const FullScreenAnimation = () => {
   // }, [isAnimating]);
   return (
     <motion.div
-    className="fixed top-0 left-0 w-full h-full bg-black z-50"
+    className="fixed top-0 left-0 w-full h-full bg-[#1e6262] z-50"
     initial={{ scaleY: 1 }}
     animate={{ scaleY: isAnimating ? 1 : 0 }}
     transition={{
@@ -72,7 +72,7 @@ const FullScreenAnimation = () => {
           }`}
         >
            <motion.div
-              className="absolute top-0 left-0 w-full h-full  bg-black z-40"
+              className="absolute top-0 left-0 w-full h-full  bg-[#1e6262] z-40"
               initial={{ scaleX: 1 }}
               animate={{ scaleX: isAnimatingLe ? 1 : 0 }}
               transition={{
@@ -85,7 +85,7 @@ const FullScreenAnimation = () => {
               // Cambia el origen de la transformación
             />
             <motion.div
-              className="absolute top-0 left-0 w-full h-full  bg-black z-50 "
+              className="absolute top-0 left-0 w-full h-full  bg-[#1e6262] z-50 "
               initial={{ scaleX: 1 }}
               animate={{ scaleX: isAnimatingLeRev ? 0 : 1 }}
               transition={{
@@ -97,7 +97,7 @@ const FullScreenAnimation = () => {
               // onAnimationComplete={() => setIsAnimatingSecond(true)} // Inicia la segunda animación
               // Cambia el origen de la transformación
             />
-          <p className={`relative  text-white underlinecartawhite  z-40 ${!isVisible ? "hidden" : ""}`}>
+          <p className={`relative  text-[#ecfffb] underlinecartawhite  z-40 ${!isVisible ? "hidden" : ""}`}>
            
             LeRomer
           </p>

@@ -35,7 +35,7 @@ const FullScreenAnimation = ({ key }) => {
 
   return (
     <motion.div
-      className={`fixed top-0 left-0 w-full h-full bg-black z-40 ${
+      className={`fixed top-0 left-0 w-full h-full bg-[#1e6262] z-40 ${
         !isVisibleFondo ? "hidden" : ""
       }`}
       initial={{ scaleY: 0 }}
@@ -61,7 +61,7 @@ const FullScreenAnimation = ({ key }) => {
         delay: 0.3,
         ease: [0, 0.71, 0.2, 1.01]
       }}
-          className={` font-sans relative   underlinecartawhite  z-40  text-5xl text-white  ${
+          className={` font-sans relative   underlinecartawhite  z-40  text-5xl text-[#ecfffb]  ${
             !isVisibleFondo ? "hidden" : ""
           }`}
         >

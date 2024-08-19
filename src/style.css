@@ -124,6 +124,10 @@
   background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,240,1) 100%);
 }
+.bg-anima{
+  background: rgb(236,255,251);
+  background: linear-gradient(180deg, rgba(236,255,251,1) 51%, rgba(30,98,98,1) 100%);
+}
 .bg-gradientcarta2{
   background: rgb(255,255,255);
 background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,240,1) 100%);
@@ -140,6 +144,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,240,1) 10
   background-repeat: no-repeat;
   background-size: cover; 
 
+}
+input:focus {
+  color: #369daa !important; /* Usa !important para asegurarte de que este estilo tenga prioridad */
 }
 .bg-der{
   background-image: url('../public/img/larga.jpg');
@@ -158,7 +165,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,240,1) 10
 
 
 .bg-gradient-border {
-  border-top: 14px solid;
+  /* border-top: 14px solid; */
   border-image-slice: 1;
   border-image-source: linear-gradient(180deg, rgba(36, 0, 0, 0) 0%, rgba(255,255,240,1) 100%);
 }.bg-gradient-border-bot {
