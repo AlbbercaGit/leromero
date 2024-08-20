@@ -27,26 +27,41 @@ const FullScreenAnimation = ({ key }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisibleFondo(false);
-      console.log("He activado setIsVisibleFondo");
-    }, 2000);
+      console.log(setIsVisibleFondo + " He activado setIsVisibleFondo ");
+    }, 900);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <motion.div
-      className={`fixed top-0 left-0 w-full h-full bg-[#1e6262] z-40 ${
+    <main className={`flex flex-col h-screen ${!isVisibleFondo ? "hidden h-0 z-0" : "flex"}`}>
+          <motion.div
+      className={`fixed top-0 left-0 w-full h-[33vh] bg-paper-texture z-40 ${
         !isVisibleFondo ? "hidden" : ""
       }`}
-      initial={{ scaleY: 0 }}
-      animate={{ scaleY: isAnimatingLeRev ? 0 : 1 }}
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: isAnimatingLeRev ? 0 : 1 }}
       transition={{
         type: "spring",
         damping: 20,
         duration: 5,
       }}
-      style={{ transformOrigin: "top" }} // Cambia el origen de la transformación
+      style={{ transformOrigin: "left" }} // Cambia el origen de la transformación
+    ></motion.div>
+    <motion.div
+      className={`fixed top-[33%] left-0 w-full h-[33vh] bg-paper-texture z-40 ${
+        !isVisibleFondo ? "hidden" : ""
+      }`}
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: isAnimatingLeRev ? 0 : 1 }}
+      transition={{
+        type: "spring",
+        damping: 20,
+        duration: 5,
+      }}
+      style={{ transformOrigin: "right" }} // Cambia el origen de la transformación
     >
+      
       <div
         id="Entrada"
         className={`fixed w-full h-full flex justify-center items-center ${
@@ -54,22 +69,35 @@ const FullScreenAnimation = ({ key }) => {
         }`}
       >
         <motion.p
-      initial={{ opacity: 0, scale: 1 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.7,
-        delay: 0.3,
-        ease: [0, 0.71, 0.2, 1.01]
-      }}
-          className={` font-sans relative   underlinecartawhite  z-40  text-5xl text-[#ecfffb]  ${
-            !isVisibleFondo ? "hidden" : ""
-          }`}
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.9,
+            delay: 0,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className={` font-sans relative   underlinecartawhite  z-40  text-5xl text-[#3fb4c4]  
+            ${!isVisibleFondo ? "hidden" : ""}`}
         >
           LeRomer
         </motion.p>
         <div>{/* Contenido adicional */}</div>
       </div>
     </motion.div>
+    <motion.div
+      className={`fixed top-[66%] left-0 w-full h-[33vh] bg-paper-texture z-40 ${
+        !isVisibleFondo ? "hidden" : ""
+      }`}
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: isAnimatingLeRev ? 0 : 1 }}
+      transition={{
+        type: "spring",
+        damping: 20,
+        duration: 5,
+      }}
+      style={{ transformOrigin: "left" }} // Cambia el origen de la transformación
+    ></motion.div>
+    </main>
   );
 };
 

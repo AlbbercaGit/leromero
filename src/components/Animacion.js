@@ -34,7 +34,7 @@ const FullScreenAnimation = () => {
   useEffect(() => {
     const timerLe = setTimeout(() => {
       setIsAnimatingLe(false);
-    }, 1000); // Duración de la animación en milisegundos
+    }, 500); // Duración de la animación en milisegundos
 
     return () => clearTimeout(timerLe);
   }, []);
@@ -52,27 +52,9 @@ const FullScreenAnimation = () => {
   //     }
   // }, [isAnimating]);
   return (
-    <motion.div
-    className="fixed top-0 left-0 w-full h-full bg-[#1e6262] z-50"
-    initial={{ scaleY: 1 }}
-    animate={{ scaleY: isAnimating ? 1 : 0 }}
-    transition={{
-      type: "spring",
-      damping: 20,
-      duration: 1,
-    }}
-    style={{ transformOrigin: "top left" }} // Cambia el origen de la transformación
-  >
-    <div className={`w-full h-full ${!isVisibleFondo ? "hidden" : ""}`}>
-
-      <div>
-        <div
-          className={`w-full h-full fixed flex justify-center items-center z-50  font-sans text-5xl ${
-            !isVisible ? "hidden" : ""
-          }`}
-        >
-           <motion.div
-              className="absolute top-0 left-0 w-full h-full  bg-[#1e6262] z-40"
+    <main className={`${!isVisibleFondo ? "hidden" : "flex"}`}>
+                 <motion.div
+              className="absolute top-[40%] left-0 w-full h-[20vh]  bg-paper-texture z-[60]"
               initial={{ scaleX: 1 }}
               animate={{ scaleX: isAnimatingLe ? 1 : 0 }}
               transition={{
@@ -85,26 +67,72 @@ const FullScreenAnimation = () => {
               // Cambia el origen de la transformación
             />
             <motion.div
-              className="absolute top-0 left-0 w-full h-full  bg-[#1e6262] z-50 "
+              className={`${!isVisible ? "hidden" : "flex"} absolute top-[40%] left-0 w-full h-[20vh]  bg-paper-texture z-[55]`} 
               initial={{ scaleX: 1 }}
               animate={{ scaleX: isAnimatingLeRev ? 0 : 1 }}
               transition={{
                 type: "spring",
                 damping: 20,
-                duration: 5,
+                duration: 3,
               }}
               style={{ transformOrigin: " right" }}
               // onAnimationComplete={() => setIsAnimatingSecond(true)} // Inicia la segunda animación
               // Cambia el origen de la transformación
             />
-          <p className={`relative  text-[#ecfffb] underlinecartawhite  z-40 ${!isVisible ? "hidden" : ""}`}>
+
+<motion.div
+    className="fixed top-0 left-0 w-[33%] h-full bg-paper-texture z-50"
+    initial={{ scaleY: 1 }}
+    animate={{ scaleY: isAnimating ? 1 : 0 }}
+    transition={{
+      type: "spring",
+      damping: 20,
+      duration: 1,
+    }}
+    style={{ transformOrigin: "top left" }} // Cambia el origen de la transformación
+  ></motion.div>
+    <motion.div
+    className="fixed top-0 left-[33%] w-[34%] h-full bg-paper-texture z-50"
+    initial={{ scaleY: 1 }}
+    animate={{ scaleY: isAnimating ? 1 : 0 }}
+    transition={{
+      type: "spring",
+      delay: 0.06,
+      damping: 20,
+      duration: 1,
+    }}
+    style={{ transformOrigin: "top left" }} // Cambia el origen de la transformación
+  >
+    <div className={`w-[33%] h-full ${!isVisibleFondo ? "hidden" : ""}`}>
+
+      <div>
+        <div
+          className={`w-[33%] h-full fixed flex justify-center items-center z-50  font-sans text-5xl ${
+            !isVisible ? "hidden" : ""
+          }`}
+        >
+
+          <p className={`relative  text-[#3fb4c4] underlinecartawhite  z-60 ${!isVisible ? "hidden" : ""}`}>
            
             LeRomer
           </p>
         </div>
       </div>
     </div>
+    
     </motion.div>
+    <motion.div
+    className="fixed top-0 left-[67%] w-[33%] h-full bg-paper-texture z-[41]"
+    initial={{ scaleY: 1 }}
+    animate={{ scaleY: isAnimating ? 1 : 0 }}
+    transition={{
+      type: "spring",
+      damping: 20,
+      duration: 1,
+    }}
+    style={{ transformOrigin: "top left" }} // Cambia el origen de la transformación
+  ></motion.div>
+    </main>
   );
 };
 
